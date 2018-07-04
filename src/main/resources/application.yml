@@ -1,0 +1,72 @@
+spring:
+  kafka:
+    consumer:
+      enable-auto-commit: true
+      auto-commit-interval: 1000
+      auto-offset-reset: latest
+      concurrency: 10
+      group-id: consumer_contract_send
+      bootstrap-servers: 10.122.30.29:9092
+
+  datasource:
+    validation-query: SELECT 1
+    validation-query-timeout: 5000
+    test-on-borrow: true
+    test-on-connect: true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: ordercenter_testuser
+    password: abcd-1234
+    url: jdbc:mysql://10.122.30.102:3306/sit_ordercenter?characterEncoding=utf-8&useSSL=false
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: root
+#    url: jdbc:mysql://localhost:3306/contract?characterEncoding=utf-8&useSSL=false
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+  jpa:
+    show-sql: true
+  application:
+    name: pcsd-orderservicecenter-contract
+#  cloud:
+#    config:
+#      discovery:
+#        enabled: true
+#        service-id: config   # 指定远程配置文件服务器  
+eureka:
+  instance:
+      preferIpAddress: true
+  client:
+    service-url:
+ #     defaultZone: http://10.96.83.154:8761/eureka/    
+      defaultZone: http://10.96.83.154:8761/eureka/,http://10.96.83.165:8761/eureka/,http://10.96.83.178:8761/eureka/
+#      defaultZone: http://10.96.83.167:8761/eureka/,http://10.96.83.169:8761/eureka/,http://10.96.83.181:8761/eureka/
+server:
+  port: 8041
+#  context-path: /v1
+filterPass: false
+
+hystrix:   
+  threadpool:   
+    default:   
+      coreSize: 500  #并发执行的最大线程数，默认10  
+  command:   
+    paas-file:   
+      execution:   
+        isolation:   
+          thread:   
+            timeoutInMilliseconds: 3600000   
+    default:   
+      execution:   
+        isolation:   
+          thread:   
+            timeoutInMilliseconds: 8000  #命令执行超时时间，默认1000ms  
+
+ribbon:  
+  ReadTimeout: 60000  
+  ConnectTimeout: 60000
+
+timeout: 90000
+contract: sit_contractSend
+tokenCheck: https://api-dev.unifiedcloud.lenovo.com/pcsd-usf-login/api/User/TokenCheck
+
