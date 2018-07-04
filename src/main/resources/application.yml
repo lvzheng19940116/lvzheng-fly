@@ -9,21 +9,43 @@ spring:
       bootstrap-servers: 10.122.30.29:9092
 
   datasource:
-    validation-query: SELECT 1
-    validation-query-timeout: 5000
-    test-on-borrow: true
-    test-on-connect: true
-    driver-class-name: com.mysql.jdbc.Driver
-    username: ordercenter_testuser
-    password: abcd-1234
-    url: jdbc:mysql://10.122.30.102:3306/sit_ordercenter?characterEncoding=utf-8&useSSL=false
-#    driver-class-name: com.mysql.jdbc.Driver
-#    username: root
-#    password: root
-#    url: jdbc:mysql://localhost:3306/contract?characterEncoding=utf-8&useSSL=false
-#  jackson:
-#    date-format: yyyy-MM-dd HH:mm:ss
-#    time-zone: GMT+8
+    primary:
+          driver-class-name: com.mysql.jdbc.Driver
+          username: root
+          password: root
+          url: jdbc:mysql://127.0.0.1/test?characterEncoding=utf-8&useSSL=false
+          validation-query: SELECT 1
+          validation-query-timeout: 5000
+          test-on-borrow: true
+          test-on-connect: true
+    secondary:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      url: jdbc:mysql://127.0.0.1/world?characterEncoding=utf-8&useSSL=false
+      validation-query: SELECT 1
+      validation-query-timeout: 5000
+      test-on-borrow: true
+      test-on-connect: true
+    hikari:
+         data-source-properties:
+            cachePrepStmts: true
+            prepStmtCacheSize: 250
+            prepStmtCacheSqlLimit: 2048
+            useServerPrepStmts: true
+            maximumPoolSize: 30
+            minimumIdle: 5
+            autoCommit: true
+            useLocalSessionState: true
+            useLocalTransactionState: true
+            rewriteBatchedStatements: true
+            cacheResultSetMetadata: true
+            cacheServerConfiguration: true
+            elideSetAutoCommits: true
+            connectionTestQuery: SELECT 1
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
   jpa:
     show-sql: true
   application:
@@ -42,7 +64,7 @@ eureka:
       defaultZone: http://10.96.83.154:8761/eureka/,http://10.96.83.165:8761/eureka/,http://10.96.83.178:8761/eureka/
 #      defaultZone: http://10.96.83.167:8761/eureka/,http://10.96.83.169:8761/eureka/,http://10.96.83.181:8761/eureka/
 server:
-  port: 8041
+  port: 8888
 #  context-path: /v1
 filterPass: false
 
