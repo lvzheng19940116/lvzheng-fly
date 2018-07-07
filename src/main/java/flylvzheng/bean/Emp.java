@@ -14,12 +14,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import flylvzheng.bean.world.User;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import flylvzheng.bean.world.User;
 import lombok.Data;
 
 /**
@@ -49,5 +49,9 @@ public class Emp {
 	@JoinColumn(name = "ttt")
 	@JsonBackReference
 	private User user;
+
+
+
+
 
 }
