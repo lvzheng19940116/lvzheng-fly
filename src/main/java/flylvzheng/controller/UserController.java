@@ -2,7 +2,10 @@ package flylvzheng.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import flylvzheng.bean.Emp;
 import flylvzheng.bean.world.User;
+import flylvzheng.feign.UserFeign;
 import flylvzheng.repository.EmpRepository;
 import flylvzheng.repository.worldRepository.UserRepository;
 
@@ -24,15 +28,25 @@ public class UserController {
 	private UserRepository userRepository;
 	@Autowired
 	private EmpRepository empRepository;
-
+	private final static Logger logger = LoggerFactory.getLogger(UserController.class);
+	@Autowired
+	private UserFeign userFeign;
+	@GetMapping(value = "/getfeign")
+	public Object getfeign() {
+	Object	 list= userFeign.get();
+		return list;
+	}
+	
+	
 	/**
 	 * 
 	 * @param user
 	 * @return
 	 */
-	@RequestMapping(value = "get")
+	@GetMapping(value = "/get")
 	public Object get() {
 		List<Emp> findAll = empRepository.findAll();
+		logger.info("当前登陆人{},密码是{}",findAll.get(0).getName(),findAll.get(0).getName());
 		return findAll;
 	}
 
