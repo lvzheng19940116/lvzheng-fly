@@ -1,475 +1,369 @@
-21:08:53.821 [Thread-17] INFO  c.n.d.DiscoveryClient - Unregistering ...
-21:08:53.839 [Thread-17] INFO  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient
-21:08:53.842 [Thread-17] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
-21:08:53.848 [Thread-17] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
-21:08:54.312 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4bbad839: startup date [Thu Jul 12 21:08:54 CST 2018]; root of context hierarchy
-21:08:54.322 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:08:54.323 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$847b957f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:08:54.375 [restartedMain] INFO  f.SpringcloudLvzhengApplication - No active profile set, falling back to default profiles: default
-21:08:54.379 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14a6b332: startup date [Thu Jul 12 21:08:54 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4bbad839
-21:08:54.934 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
-21:08:54.966 [restartedMain] INFO  o.s.c.c.s.GenericScope - BeanFactory id=f1e339b4-c99a-3412-96b6-15ee5dbaff2a
-21:08:54.976 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:08:55.002 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$68619282] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:08:55.007 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$847b957f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:08:55.095 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
-21:08:55.096 [restartedMain] INFO  o.a.c.c.StandardService - Starting service [Tomcat]
-21:08:55.096 [restartedMain] INFO  o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:08:55.110 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-21:08:55.111 [localhost-startStop-1] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 732 ms
-21:08:55.442 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-21:08:55.443 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-21:08:55.443 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-21:08:55.443 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-21:08:55.443 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-21:08:55.443 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
-21:08:55.443 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
-21:08:55.474 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-3 - Starting...
-21:08:55.478 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-3 - Start completed.
-21:08:55.484 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
-21:08:55.484 [restartedMain] INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-21:08:55.493 [restartedMain] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:08:55.531 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-21:08:55.604 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing FeignContext-lvzheng-service: startup date [Thu Jul 12 21:08:55 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14a6b332
-21:08:55.611 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:08:55.686 [restartedMain] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-21:08:55.703 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:08:55.750 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14a6b332: startup date [Thu Jul 12 21:08:54 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4bbad839
-21:08:55.760 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/upload]}" onto public java.lang.String flylvzheng.controller.UploadDownController.upload(org.springframework.web.multipart.MultipartFile)
-21:08:55.761 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/batch],methods=[POST]}" onto public java.lang.String flylvzheng.controller.UploadDownController.handleFileUpload(javax.servlet.http.HttpServletRequest)
-21:08:55.761 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/download],methods=[GET]}" onto public java.lang.String flylvzheng.controller.UploadDownController.downloadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:08:55.765 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.get()
-21:08:55.765 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save],methods=[POST]}" onto public java.lang.Object flylvzheng.controller.UserController.save(flylvzheng.bean.Emp)
-21:08:55.765 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getfeign],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.getfeign()
-21:08:55.766 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get1/{name}/{age}]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get1(java.lang.String,java.lang.String)
-21:08:55.766 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get2]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get2()
-21:08:55.766 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/up],methods=[PUT]}" onto public java.lang.Object flylvzheng.controller.UserController.up(flylvzheng.bean.Emp)
-21:08:55.767 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/get],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.index()
-21:08:55.767 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/upload],methods=[POST]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.singleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-21:08:55.767 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/uploadStatus],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.uploadStatus()
-21:08:55.768 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-21:08:55.769 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:08:55.779 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:08:55.779 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:08:55.910 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-21:08:55.939 [restartedMain] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-21:08:55.941 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-21:08:55.941 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-21:08:55.942 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:08:55.959 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-21:08:55.960 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-21:08:55.962 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
-21:08:55.963 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
-21:08:55.964 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-21:08:55.966 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-21:08:55.968 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-21:08:55.970 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=14a6b332,type=ConfigurationPropertiesRebinder]
-21:08:55.973 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-21:08:55.977 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
-21:08:55.979 [restartedMain] INFO  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
-21:08:55.982 [restartedMain] INFO  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
-21:08:55.988 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
-21:08:55.988 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
-21:08:55.988 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
-21:08:55.989 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
-21:08:56.039 [restartedMain] INFO  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-21:08:56.041 [restartedMain] INFO  c.n.d.DiscoveryClient - Disable delta property : false
-21:08:56.043 [restartedMain] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-21:08:56.043 [restartedMain] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
-21:08:56.043 [restartedMain] INFO  c.n.d.DiscoveryClient - Application is null : false
-21:08:56.043 [restartedMain] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-21:08:56.043 [restartedMain] INFO  c.n.d.DiscoveryClient - Application version is -1: true
-21:08:56.043 [restartedMain] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-21:08:56.049 [restartedMain] INFO  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-21:08:56.049 [restartedMain] INFO  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-21:08:56.050 [restartedMain] INFO  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1531400936050 with initial instances count: 0
-21:08:56.052 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application lvzheng-service with eureka with status UP
-21:08:56.052 [restartedMain] INFO  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1531400936052, current=UP, previous=STARTING]
-21:08:56.052 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:08:56.071 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
-21:08:56.072 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9999
-21:08:56.073 [restartedMain] INFO  f.SpringcloudLvzhengApplication - Started SpringcloudLvzhengApplication in 1.845 seconds (JVM running for 153.418)
-21:08:56.078 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-21:08:59.244 [Thread-40] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14a6b332: startup date [Thu Jul 12 21:08:54 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4bbad839
-21:08:59.245 [Thread-40] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application lvzheng-service with eureka with status DOWN
-21:08:59.244 [Thread-16] INFO  c.n.l.PollingServerListUpdater - Shutting down the Executor Pool for PollingServerListUpdater
-21:08:59.246 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:08:59.248 [Thread-40] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
-21:08:59.250 [Thread-40] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-21:08:59.251 [Thread-40] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-21:08:59.251 [Thread-40] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing FeignContext-lvzheng-service: startup date [Thu Jul 12 21:08:55 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14a6b332
-21:08:59.253 [Thread-40] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-21:08:59.253 [Thread-40] INFO  c.n.d.DiscoveryClient - Shutting down DiscoveryClient ...
-21:09:02.255 [Thread-40] INFO  c.n.d.DiscoveryClient - Unregistering ...
-21:09:02.271 [Thread-40] INFO  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient
-21:09:02.272 [Thread-40] INFO  c.z.h.HikariDataSource - HikariPool-3 - Shutdown initiated...
-21:09:02.279 [Thread-40] INFO  c.z.h.HikariDataSource - HikariPool-3 - Shutdown completed.
-21:09:15.413 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1daa6319: startup date [Thu Jul 12 21:09:15 CST 2018]; root of context hierarchy
-21:09:15.734 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:09:15.780 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$893d4e0b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:09:16.145 [restartedMain] INFO  f.SpringcloudLvzhengApplication - No active profile set, falling back to default profiles: default
-21:09:16.183 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cbfe309: startup date [Thu Jul 12 21:09:16 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1daa6319
-21:09:17.463 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
-21:09:17.820 [restartedMain] INFO  o.s.c.c.s.GenericScope - BeanFactory id=f1e339b4-c99a-3412-96b6-15ee5dbaff2a
-21:09:17.847 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:09:18.088 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6d234b0e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:09:18.137 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$893d4e0b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:09:18.587 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
-21:09:18.606 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
-21:09:18.626 [restartedMain] INFO  o.a.c.c.StandardService - Starting service [Tomcat]
-21:09:18.626 [restartedMain] INFO  o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:09:18.636 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lvzheng/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-21:09:18.790 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-21:09:18.791 [localhost-startStop-1] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 2609 ms
-21:09:19.090 [localhost-startStop-1] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-21:09:19.102 [localhost-startStop-1] INFO  c.n.c.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@582aa926
-21:09:19.331 [localhost-startStop-1] INFO  o.s.a.f.CglibAopProxy - Method [void com.zaxxer.hikari.HikariConfig.seal()] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
-21:09:20.143 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-21:09:20.148 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-21:09:20.149 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-21:09:20.149 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-21:09:20.149 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-21:09:20.150 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
-21:09:20.150 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
-21:09:20.290 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
-21:09:20.630 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
-21:09:20.691 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
-21:09:20.714 [restartedMain] INFO  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-21:09:20.822 [restartedMain] INFO  o.h.Version - HHH000412: Hibernate Core {5.2.17.Final}
-21:09:20.824 [restartedMain] INFO  o.h.c.Environment - HHH000206: hibernate.properties not found
-21:09:20.946 [restartedMain] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:09:21.229 [restartedMain] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:09:22.312 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-21:09:23.433 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing FeignContext-lvzheng-service: startup date [Thu Jul 12 21:09:23 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cbfe309
-21:09:23.476 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:09:24.044 [restartedMain] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-21:09:24.325 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:09:24.920 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cbfe309: startup date [Thu Jul 12 21:09:16 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1daa6319
-21:09:25.144 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/upload]}" onto public java.lang.String flylvzheng.controller.UploadDownController.upload(org.springframework.web.multipart.MultipartFile)
-21:09:25.146 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/batch],methods=[POST]}" onto public java.lang.String flylvzheng.controller.UploadDownController.handleFileUpload(javax.servlet.http.HttpServletRequest)
-21:09:25.146 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/download],methods=[GET]}" onto public java.lang.String flylvzheng.controller.UploadDownController.downloadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:09:25.149 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.get()
-21:09:25.149 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save],methods=[POST]}" onto public java.lang.Object flylvzheng.controller.UserController.save(flylvzheng.bean.Emp)
-21:09:25.150 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/up],methods=[PUT]}" onto public java.lang.Object flylvzheng.controller.UserController.up(flylvzheng.bean.Emp)
-21:09:25.150 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get1/{name}/{age}]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get1(java.lang.String,java.lang.String)
-21:09:25.150 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getfeign],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.getfeign()
-21:09:25.152 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get2]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get2()
-21:09:25.156 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/get],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.index()
-21:09:25.156 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/upload],methods=[POST]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.singleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-21:09:25.157 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/uploadStatus],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.uploadStatus()
-21:09:25.162 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-21:09:25.162 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:09:25.251 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:09:25.252 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:09:26.431 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-21:09:26.709 [restartedMain] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-21:09:26.734 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-21:09:26.735 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-21:09:26.736 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:09:26.921 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-21:09:26.926 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-21:09:26.938 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
-21:09:26.940 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
-21:09:26.944 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-21:09:26.948 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-21:09:26.961 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-21:09:26.991 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=cbfe309,type=ConfigurationPropertiesRebinder]
-21:09:27.007 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-21:09:27.030 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
-21:09:27.054 [restartedMain] INFO  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
-21:09:27.159 [restartedMain] INFO  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
-21:09:27.547 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
-21:09:27.548 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
-21:09:27.963 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
-21:09:27.964 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
-21:09:28.543 [restartedMain] INFO  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-21:09:28.616 [restartedMain] INFO  c.n.d.DiscoveryClient - Disable delta property : false
-21:09:28.616 [restartedMain] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-21:09:28.616 [restartedMain] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
-21:09:28.616 [restartedMain] INFO  c.n.d.DiscoveryClient - Application is null : false
-21:09:28.616 [restartedMain] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-21:09:28.617 [restartedMain] INFO  c.n.d.DiscoveryClient - Application version is -1: true
-21:09:28.617 [restartedMain] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-21:09:28.822 [restartedMain] INFO  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-21:09:28.826 [restartedMain] INFO  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-21:09:28.831 [restartedMain] INFO  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1531400968830 with initial instances count: 0
-21:09:28.870 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application lvzheng-service with eureka with status UP
-21:09:28.871 [restartedMain] INFO  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1531400968871, current=UP, previous=STARTING]
-21:09:28.873 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:09:28.962 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
-21:09:29.005 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - Using a shared selector for servlet write/read
-21:09:29.026 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
-21:09:29.027 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9999
-21:09:29.030 [restartedMain] INFO  f.SpringcloudLvzhengApplication - Started SpringcloudLvzhengApplication in 14.346 seconds (JVM running for 14.934)
-21:09:58.570 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-21:09:58.572 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-21:09:58.600 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
-21:09:58.661 [http-nio-9999-exec-1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing SpringClientFactory-lvzheng-service: startup date [Thu Jul 12 21:09:58 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cbfe309
-21:09:58.725 [http-nio-9999-exec-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:09:58.825 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
-21:09:58.825 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-21:09:58.825 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
-21:09:58.825 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
-21:09:58.825 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-21:09:58.825 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: true
-21:09:58.825 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-21:09:58.904 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:09:59.151 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - Re-registering apps/LVZHENG-SERVICE
-21:09:59.151 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:09:59.213 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - The response status is 200
-21:09:59.312 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - registration status: 204
-21:09:59.328 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - registration status: 204
-21:09:59.359 [http-nio-9999-exec-1] INFO  c.n.c.ChainedDynamicProperty - Flipping property: lvzheng-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-21:09:59.395 [http-nio-9999-exec-1] INFO  c.n.u.c.ShutdownEnabledTimer - Shutdown hook installed for: NFLoadBalancer-PingTimer-lvzheng-service
-21:09:59.474 [http-nio-9999-exec-1] INFO  c.n.l.BaseLoadBalancer - Client: lvzheng-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=lvzheng-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-21:09:59.481 [http-nio-9999-exec-1] INFO  c.n.l.DynamicServerListLoadBalancer - Using serverListUpdater PollingServerListUpdater
-21:09:59.487 [http-nio-9999-exec-1] INFO  c.n.l.DynamicServerListLoadBalancer - DynamicServerListLoadBalancer for client lvzheng-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=lvzheng-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@8bdaec7
-21:10:29.219 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
-21:10:29.222 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-21:10:29.222 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
-21:10:29.223 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
-21:10:29.223 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-21:10:29.223 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: false
-21:10:29.223 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-21:10:29.287 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - The response status is 200
-21:10:30.500 [PollingServerListUpdater-0] INFO  c.n.c.ChainedDynamicProperty - Flipping property: lvzheng-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-21:10:42.831 [http-nio-9999-exec-6] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-21:10:43.029 [http-nio-9999-exec-6] INFO  f.c.UserController - 当前登陆人123,密码是123
-21:11:30.404 [http-nio-9999-exec-1] INFO  f.c.UserController - 当前登陆人123,密码是123
-21:14:28.620 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-21:14:35.314 [Thread-18] INFO  c.n.l.PollingServerListUpdater - Shutting down the Executor Pool for PollingServerListUpdater
-21:14:35.315 [Thread-14] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cbfe309: startup date [Thu Jul 12 21:09:16 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1daa6319
-21:14:35.317 [Thread-14] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application lvzheng-service with eureka with status DOWN
-21:14:35.319 [Thread-14] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
-21:14:35.323 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:14:35.375 [Thread-14] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-21:14:35.377 [Thread-14] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-21:14:35.381 [Thread-14] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing SpringClientFactory-lvzheng-service: startup date [Thu Jul 12 21:09:58 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cbfe309
-21:14:35.388 [Thread-14] INFO  c.n.u.c.ShutdownEnabledTimer - Shutdown hook removed for: NFLoadBalancer-PingTimer-lvzheng-service
-21:14:35.388 [Thread-14] INFO  c.n.u.c.ShutdownEnabledTimer - Exception caught (might be ok if at shutdown)
-java.lang.IllegalStateException: Shutdown in progress
-	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
-	at java.lang.Runtime.removeShutdownHook(Runtime.java:239)
-	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
-	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:613)
-	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:864)
-	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:967)
-	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:76)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017)
-	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937)
-21:14:35.399 [Thread-14] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing FeignContext-lvzheng-service: startup date [Thu Jul 12 21:09:23 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@cbfe309
-21:14:35.402 [Thread-14] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-21:14:35.406 [Thread-14] INFO  c.n.d.DiscoveryClient - Shutting down DiscoveryClient ...
-21:14:38.408 [Thread-14] INFO  c.n.d.DiscoveryClient - Unregistering ...
-21:14:38.432 [Thread-14] INFO  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient
-21:14:38.435 [Thread-14] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
-21:14:38.443 [Thread-14] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
-21:16:46.987 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@31c6c645: startup date [Thu Jul 12 21:16:46 CST 2018]; root of context hierarchy
-21:16:47.401 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:16:47.462 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$79eebd7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:16:47.796 [restartedMain] INFO  f.SpringcloudLvzhengApplication - No active profile set, falling back to default profiles: default
-21:16:47.819 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4af07f12: startup date [Thu Jul 12 21:16:47 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31c6c645
-21:16:49.469 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
-21:16:49.835 [restartedMain] INFO  o.s.c.c.s.GenericScope - BeanFactory id=f1e339b4-c99a-3412-96b6-15ee5dbaff2a
-21:16:49.890 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:16:50.118 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5dd4ba7e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:16:50.169 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$79eebd7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-21:16:50.667 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
-21:16:50.688 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
-21:16:50.703 [restartedMain] INFO  o.a.c.c.StandardService - Starting service [Tomcat]
-21:16:50.703 [restartedMain] INFO  o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
-21:16:50.712 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lvzheng/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-21:16:50.876 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-21:16:50.877 [localhost-startStop-1] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 3058 ms
-21:16:51.204 [localhost-startStop-1] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-21:16:51.217 [localhost-startStop-1] INFO  c.n.c.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2936263d
-21:16:51.458 [localhost-startStop-1] INFO  o.s.a.f.CglibAopProxy - Method [void com.zaxxer.hikari.HikariConfig.seal()] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
-21:16:52.529 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
-21:16:52.538 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-21:16:52.538 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-21:16:52.538 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-21:16:52.538 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
-21:16:52.538 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
-21:16:52.538 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
-21:16:52.689 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
-21:16:53.043 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
-21:16:53.108 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
-21:16:53.312 [restartedMain] INFO  o.h.Version - HHH000412: Hibernate Core {5.2.17.Final}
-21:16:53.314 [restartedMain] INFO  o.h.c.Environment - HHH000206: hibernate.properties not found
-21:16:53.357 [restartedMain] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-21:16:53.533 [restartedMain] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-21:16:54.203 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-21:16:54.830 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing FeignContext-lvzheng-service: startup date [Thu Jul 12 21:16:54 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4af07f12
-21:16:54.859 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:16:55.131 [restartedMain] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-21:16:55.259 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:16:55.507 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4af07f12: startup date [Thu Jul 12 21:16:47 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31c6c645
-21:16:55.604 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/upload]}" onto public java.lang.String flylvzheng.controller.UploadDownController.upload(org.springframework.web.multipart.MultipartFile)
-21:16:55.606 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/batch],methods=[POST]}" onto public java.lang.String flylvzheng.controller.UploadDownController.handleFileUpload(javax.servlet.http.HttpServletRequest)
-21:16:55.606 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/download],methods=[GET]}" onto public java.lang.String flylvzheng.controller.UploadDownController.downloadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:16:55.609 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.get()
-21:16:55.609 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save],methods=[POST]}" onto public java.lang.Object flylvzheng.controller.UserController.save(flylvzheng.bean.Emp)
-21:16:55.609 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/up],methods=[PUT]}" onto public java.lang.Object flylvzheng.controller.UserController.up(flylvzheng.bean.Emp)
-21:16:55.609 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getfeign],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.getfeign()
-21:16:55.610 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get1/{name}/{age}]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get1(java.lang.String,java.lang.String)
-21:16:55.610 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get2]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get2()
-21:16:55.611 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/get],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.index()
-21:16:55.612 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/upload],methods=[POST]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.singleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-21:16:55.612 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/uploadStatus],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.uploadStatus()
-21:16:55.616 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-21:16:55.616 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:16:55.676 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:16:55.676 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-21:16:56.897 [restartedMain] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-21:16:56.915 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-21:16:56.917 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
-21:16:56.918 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-21:16:57.017 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
-21:16:57.019 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
-21:16:57.030 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
-21:16:57.032 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
-21:16:57.033 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-21:16:57.037 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-21:16:57.070 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-21:16:57.081 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=4af07f12,type=ConfigurationPropertiesRebinder]
-21:16:57.087 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-21:16:57.097 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
-21:16:57.107 [restartedMain] INFO  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
-21:16:57.160 [restartedMain] INFO  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
-21:16:57.370 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
-21:16:57.370 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
-21:16:57.530 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
-21:16:57.531 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
-21:16:57.756 [restartedMain] INFO  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-21:16:57.782 [restartedMain] INFO  c.n.d.DiscoveryClient - Disable delta property : false
-21:16:57.783 [restartedMain] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-21:16:57.783 [restartedMain] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
-21:16:57.783 [restartedMain] INFO  c.n.d.DiscoveryClient - Application is null : false
-21:16:57.783 [restartedMain] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-21:16:57.783 [restartedMain] INFO  c.n.d.DiscoveryClient - Application version is -1: true
-21:16:57.783 [restartedMain] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-21:16:58.169 [restartedMain] INFO  c.n.d.DiscoveryClient - The response status is 200
-21:16:58.171 [restartedMain] INFO  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-21:16:58.174 [restartedMain] INFO  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-21:16:58.180 [restartedMain] INFO  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1531401418179 with initial instances count: 0
-21:16:58.189 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application lvzheng-service with eureka with status UP
-21:16:58.189 [restartedMain] INFO  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1531401418189, current=UP, previous=STARTING]
-21:16:58.191 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:16:58.339 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
-21:16:58.404 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - Using a shared selector for servlet write/read
-21:16:58.466 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - registration status: 204
-21:16:58.476 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
-21:16:58.478 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9999
-21:16:58.481 [restartedMain] INFO  f.SpringcloudLvzhengApplication - Started SpringcloudLvzhengApplication in 12.169 seconds (JVM running for 12.763)
-21:17:28.173 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
-21:17:28.174 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-21:17:28.174 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
-21:17:28.174 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
-21:17:28.174 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-21:17:28.174 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: false
-21:17:28.175 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-21:17:28.290 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - The response status is 200
-21:17:30.645 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
-21:17:30.645 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
-21:17:30.671 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
-21:17:30.730 [http-nio-9999-exec-1] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing SpringClientFactory-lvzheng-service: startup date [Thu Jul 12 21:17:30 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4af07f12
-21:17:30.798 [http-nio-9999-exec-1] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-21:17:31.035 [http-nio-9999-exec-1] INFO  c.n.c.ChainedDynamicProperty - Flipping property: lvzheng-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-21:17:31.065 [http-nio-9999-exec-1] INFO  c.n.u.c.ShutdownEnabledTimer - Shutdown hook installed for: NFLoadBalancer-PingTimer-lvzheng-service
-21:17:31.104 [http-nio-9999-exec-1] INFO  c.n.l.BaseLoadBalancer - Client: lvzheng-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=lvzheng-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-21:17:31.120 [http-nio-9999-exec-1] INFO  c.n.l.DynamicServerListLoadBalancer - Using serverListUpdater PollingServerListUpdater
-21:17:31.149 [http-nio-9999-exec-1] INFO  c.n.c.ChainedDynamicProperty - Flipping property: lvzheng-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-21:17:31.151 [http-nio-9999-exec-1] INFO  c.n.l.DynamicServerListLoadBalancer - DynamicServerListLoadBalancer for client lvzheng-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=lvzheng-service,current list of Servers=[192.168.249.130:9999],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:192.168.249.130:9999;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@34889100
-21:17:31.324 [http-nio-9999-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-21:17:31.563 [http-nio-9999-exec-2] INFO  f.c.UserController - 当前登陆人123,密码是123
-21:17:32.128 [PollingServerListUpdater-0] INFO  c.n.c.ChainedDynamicProperty - Flipping property: lvzheng-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-21:17:48.229 [http-nio-9999-exec-7] INFO  f.c.UserController - 当前登陆人123,密码是123
-21:18:55.375 [http-nio-9999-exec-3] INFO  f.c.UserController - 当前登陆人123,密码是123
-21:18:58.537 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - Re-registering apps/LVZHENG-SERVICE
-21:18:58.537 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:18:58.712 [DiscoveryClient-HeartbeatExecutor-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - registration status: 204
-21:19:28.585 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
-21:19:28.588 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-21:19:28.588 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
-21:19:28.588 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
-21:19:28.588 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-21:19:28.588 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: false
-21:19:28.588 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-21:19:28.609 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - The response status is 200
-21:20:01.039 [Thread-16] INFO  c.n.l.PollingServerListUpdater - Shutting down the Executor Pool for PollingServerListUpdater
-21:20:01.039 [Thread-12] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4af07f12: startup date [Thu Jul 12 21:16:47 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@31c6c645
-21:20:01.041 [Thread-12] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application lvzheng-service with eureka with status DOWN
-21:20:01.042 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999: registering service...
-21:20:01.045 [Thread-12] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
-21:20:01.065 [Thread-12] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
-21:20:01.066 [Thread-12] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
-21:20:01.079 [Thread-12] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing SpringClientFactory-lvzheng-service: startup date [Thu Jul 12 21:17:30 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4af07f12
-21:20:01.093 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - registration status: 204
-21:20:01.105 [Thread-12] INFO  c.n.u.c.ShutdownEnabledTimer - Shutdown hook removed for: NFLoadBalancer-PingTimer-lvzheng-service
-21:20:01.105 [Thread-12] INFO  c.n.u.c.ShutdownEnabledTimer - Exception caught (might be ok if at shutdown)
-java.lang.IllegalStateException: Shutdown in progress
-	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
-	at java.lang.Runtime.removeShutdownHook(Runtime.java:239)
-	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
-	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:613)
-	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:864)
-	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017)
-	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:967)
-	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:76)
-	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:957)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:964)
-	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041)
-	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017)
-	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:937)
-21:20:01.111 [Thread-12] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing FeignContext-lvzheng-service: startup date [Thu Jul 12 21:16:54 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4af07f12
-21:20:01.114 [Thread-12] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-21:20:01.120 [Thread-12] INFO  c.n.d.DiscoveryClient - Shutting down DiscoveryClient ...
-21:20:04.125 [Thread-12] INFO  c.n.d.DiscoveryClient - Unregistering ...
-21:20:04.146 [Thread-12] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/lvzhengdembp.lan:lvzheng-service:9999 - deregister  status: 200
-21:20:04.169 [Thread-12] INFO  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient
-21:20:04.173 [Thread-12] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
-21:20:04.184 [Thread-12] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:50:49.215 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@37ecf78a: startup date [Fri Jul 27 10:50:49 CST 2018]; root of context hierarchy
+10:50:49.564 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:50:49.610 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70fec4e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:50:49.950 [restartedMain] INFO  f.SpringcloudLvzhengApplication - No active profile set, falling back to default profiles: default
+10:50:49.975 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33a0ac64: startup date [Fri Jul 27 10:50:49 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@37ecf78a
+10:50:52.207 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+10:50:52.737 [restartedMain] INFO  o.s.c.c.s.GenericScope - BeanFactory id=a18cc81e-33d8-3b8e-9b4e-7460a0ddde35
+10:50:52.802 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:50:53.134 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54e4c1ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:50:53.212 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70fec4e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:50:53.842 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+10:50:53.867 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+10:50:53.889 [restartedMain] INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+10:50:53.890 [restartedMain] INFO  o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+10:50:53.903 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lvzheng/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+10:50:54.074 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+10:50:54.075 [localhost-startStop-1] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 4100 ms
+10:50:54.522 [localhost-startStop-1] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:50:54.541 [localhost-startStop-1] INFO  c.n.c.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3fbcfa9
+10:50:54.830 [localhost-startStop-1] INFO  o.s.a.f.CglibAopProxy - Method [void com.zaxxer.hikari.HikariConfig.seal()] is package-visible across different ClassLoaders and cannot get proxied via CGLIB: Declare this method as public or protected if you need to support invocations through the proxy.
+10:50:56.012 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+10:50:56.030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+10:50:56.030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10:50:56.030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10:50:56.030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+10:50:56.030 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
+10:50:56.031 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+10:50:56.259 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+10:50:56.650 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+10:50:56.742 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+10:50:56.985 [restartedMain] INFO  o.h.Version - HHH000412: Hibernate Core {5.2.17.Final}
+10:50:56.988 [restartedMain] INFO  o.h.c.Environment - HHH000206: hibernate.properties not found
+10:50:57.087 [restartedMain] INFO  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+10:50:57.539 [restartedMain] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:50:58.491 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:50:59.225 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing FeignContext-lvzheng-service: startup date [Fri Jul 27 10:50:59 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33a0ac64
+10:50:59.259 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:50:59.588 [restartedMain] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:50:59.719 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:51:00.098 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33a0ac64: startup date [Fri Jul 27 10:50:49 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@37ecf78a
+10:51:00.211 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getexcel],methods=[GET]}" onto public void flylvzheng.controller.ExcelTest.aaa(javax.servlet.http.HttpServletResponse)
+10:51:00.214 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/upload]}" onto public java.lang.String flylvzheng.controller.UploadDownController.upload(org.springframework.web.multipart.MultipartFile)
+10:51:00.214 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/batch],methods=[POST]}" onto public java.lang.String flylvzheng.controller.UploadDownController.handleFileUpload(javax.servlet.http.HttpServletRequest)
+10:51:00.214 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/download],methods=[GET]}" onto public java.lang.String flylvzheng.controller.UploadDownController.downloadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:51:00.217 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.get()
+10:51:00.217 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save],methods=[POST]}" onto public java.lang.Object flylvzheng.controller.UserController.save(flylvzheng.bean.Emp)
+10:51:00.217 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/up],methods=[PUT]}" onto public java.lang.Object flylvzheng.controller.UserController.up(flylvzheng.bean.Emp)
+10:51:00.217 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getfeign],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.getfeign()
+10:51:00.217 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get1/{name}/{age}]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get1(java.lang.String,java.lang.String)
+10:51:00.218 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get2]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get2()
+10:51:00.222 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/get],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.index()
+10:51:00.222 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/upload],methods=[POST]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.singleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+10:51:00.222 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/uploadStatus],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.uploadStatus()
+10:51:00.225 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10:51:00.226 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:51:00.277 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:51:00.277 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:51:01.091 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+10:51:01.394 [restartedMain] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+10:51:01.434 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+10:51:01.435 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+10:51:01.439 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:51:01.578 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+10:51:01.583 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+10:51:01.596 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+10:51:01.604 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+10:51:01.608 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+10:51:01.617 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+10:51:01.630 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+10:51:01.653 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=33a0ac64,type=ConfigurationPropertiesRebinder]
+10:51:01.668 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+10:51:01.681 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+10:51:01.697 [restartedMain] INFO  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
+10:51:01.784 [restartedMain] INFO  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
+10:51:02.065 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+10:51:02.066 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+10:51:02.305 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+10:51:02.305 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+10:51:02.539 [restartedMain] INFO  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:51:02.566 [restartedMain] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:51:02.566 [restartedMain] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:51:02.566 [restartedMain] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:51:02.566 [restartedMain] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:51:02.566 [restartedMain] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:51:02.566 [restartedMain] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:51:02.566 [restartedMain] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:51:02.697 [restartedMain] INFO  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+10:51:02.701 [restartedMain] INFO  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:51:02.706 [restartedMain] INFO  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1532659862704 with initial instances count: 0
+10:51:02.714 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application lvzheng-service with eureka with status UP
+10:51:02.716 [restartedMain] INFO  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1532659862716, current=UP, previous=STARTING]
+10:51:02.719 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:51:02.797 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+10:51:02.882 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - Using a shared selector for servlet write/read
+10:51:02.942 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+10:51:02.943 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9999
+10:51:02.946 [restartedMain] INFO  f.SpringcloudLvzhengApplication - Started SpringcloudLvzhengApplication in 14.882 seconds (JVM running for 15.696)
+10:51:23.384 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:51:23.384 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+10:51:23.429 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms
+10:51:32.703 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:51:32.703 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:51:32.703 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:51:32.703 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:51:32.704 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:51:32.704 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:51:32.704 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:51:32.734 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:52:02.726 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:52:02.727 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:52:02.728 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:52:02.728 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:52:02.728 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:52:02.728 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:52:02.728 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:52:02.741 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:52:32.742 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:52:32.742 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:52:32.743 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:52:32.743 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:52:32.743 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:52:32.745 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:52:32.745 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:52:32.749 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:52:47.598 [Thread-11] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@37ecf78a: startup date [Fri Jul 27 10:50:49 CST 2018]; root of context hierarchy
+10:52:47.601 [Thread-11] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33a0ac64: startup date [Fri Jul 27 10:50:49 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@37ecf78a
+10:52:47.602 [Thread-11] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application lvzheng-service with eureka with status DOWN
+10:52:47.604 [Thread-11] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+10:52:47.621 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:52:47.630 [Thread-11] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+10:52:47.631 [Thread-11] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+10:52:47.638 [Thread-11] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing FeignContext-lvzheng-service: startup date [Fri Jul 27 10:50:59 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@33a0ac64
+10:52:47.641 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:52:47.648 [Thread-11] INFO  c.n.d.DiscoveryClient - Shutting down DiscoveryClient ...
+10:52:50.652 [Thread-11] INFO  c.n.d.DiscoveryClient - Unregistering ...
+10:52:50.678 [Thread-11] INFO  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient
+10:52:50.681 [Thread-11] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+10:52:50.691 [Thread-11] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:52:51.370 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4eec3c7f: startup date [Fri Jul 27 10:52:51 CST 2018]; root of context hierarchy
+10:52:51.405 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:52:51.407 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70fec4e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:52:51.481 [restartedMain] INFO  f.SpringcloudLvzhengApplication - No active profile set, falling back to default profiles: default
+10:52:51.484 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3382a81e: startup date [Fri Jul 27 10:52:51 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4eec3c7f
+10:52:52.432 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+10:52:52.494 [restartedMain] INFO  o.s.c.c.s.GenericScope - BeanFactory id=a18cc81e-33d8-3b8e-9b4e-7460a0ddde35
+10:52:52.510 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:52:52.554 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54e4c1ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:52:52.566 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70fec4e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:52:52.722 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+10:52:52.723 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+10:52:52.723 [restartedMain] INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+10:52:52.724 [restartedMain] INFO  o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+10:52:52.737 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+10:52:52.738 [localhost-startStop-1] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 1254 ms
+10:52:53.246 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+10:52:53.246 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+10:52:53.246 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10:52:53.246 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10:52:53.246 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+10:52:53.246 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
+10:52:53.246 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+10:52:53.305 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-2 - Starting...
+10:52:53.312 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-2 - Start completed.
+10:52:53.321 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+10:52:53.342 [restartedMain] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:52:53.446 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:52:53.559 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing FeignContext-lvzheng-service: startup date [Fri Jul 27 10:52:53 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3382a81e
+10:52:53.574 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:52:53.724 [restartedMain] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:52:53.759 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:52:53.862 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3382a81e: startup date [Fri Jul 27 10:52:51 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4eec3c7f
+10:52:53.884 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getexcel],methods=[GET]}" onto public void flylvzheng.controller.ExcelTest.aaa(javax.servlet.http.HttpServletResponse)
+10:52:53.885 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/upload]}" onto public java.lang.String flylvzheng.controller.UploadDownController.upload(org.springframework.web.multipart.MultipartFile)
+10:52:53.886 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/batch],methods=[POST]}" onto public java.lang.String flylvzheng.controller.UploadDownController.handleFileUpload(javax.servlet.http.HttpServletRequest)
+10:52:53.886 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/download],methods=[GET]}" onto public java.lang.String flylvzheng.controller.UploadDownController.downloadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:52:53.888 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.get()
+10:52:53.888 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save],methods=[POST]}" onto public java.lang.Object flylvzheng.controller.UserController.save(flylvzheng.bean.Emp)
+10:52:53.899 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/up],methods=[PUT]}" onto public java.lang.Object flylvzheng.controller.UserController.up(flylvzheng.bean.Emp)
+10:52:53.899 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getfeign],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.getfeign()
+10:52:53.899 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get1/{name}/{age}]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get1(java.lang.String,java.lang.String)
+10:52:53.899 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get2]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get2()
+10:52:53.901 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/get],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.index()
+10:52:53.901 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/upload],methods=[POST]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.singleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+10:52:53.901 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/uploadStatus],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.uploadStatus()
+10:52:53.904 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10:52:53.904 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:52:53.958 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:52:53.958 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:52:54.311 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+10:52:54.380 [restartedMain] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+10:52:54.383 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+10:52:54.384 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+10:52:54.384 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:52:54.430 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+10:52:54.431 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+10:52:54.436 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+10:52:54.437 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+10:52:54.438 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+10:52:54.445 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+10:52:54.449 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+10:52:54.452 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=3382a81e,type=ConfigurationPropertiesRebinder]
+10:52:54.458 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+10:52:54.466 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+10:52:54.468 [restartedMain] INFO  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
+10:52:54.503 [restartedMain] INFO  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
+10:52:54.526 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+10:52:54.526 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+10:52:54.526 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+10:52:54.526 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+10:52:54.631 [restartedMain] INFO  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:52:54.644 [restartedMain] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:52:54.644 [restartedMain] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:52:54.644 [restartedMain] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:52:54.644 [restartedMain] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:52:54.644 [restartedMain] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:52:54.644 [restartedMain] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:52:54.644 [restartedMain] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:52:54.660 [restartedMain] INFO  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+10:52:54.661 [restartedMain] INFO  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:52:54.670 [restartedMain] INFO  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1532659974670 with initial instances count: 0
+10:52:54.678 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application lvzheng-service with eureka with status UP
+10:52:54.678 [restartedMain] INFO  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1532659974678, current=UP, previous=STARTING]
+10:52:54.678 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:52:54.733 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+10:52:54.733 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - Using a shared selector for servlet write/read
+10:52:54.737 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+10:52:54.738 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9999
+10:52:54.738 [restartedMain] INFO  f.SpringcloudLvzhengApplication - Started SpringcloudLvzhengApplication in 3.591 seconds (JVM running for 127.489)
+10:52:54.748 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+10:53:00.849 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:53:00.849 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+10:53:00.859 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+10:53:24.665 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:53:24.667 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:53:24.667 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:53:24.668 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:53:24.668 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:53:24.668 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:53:24.668 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:53:24.685 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:53:44.258 [Thread-15] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@4eec3c7f: startup date [Fri Jul 27 10:52:51 CST 2018]; root of context hierarchy
+10:53:44.260 [Thread-15] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3382a81e: startup date [Fri Jul 27 10:52:51 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4eec3c7f
+10:53:44.261 [Thread-15] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application lvzheng-service with eureka with status DOWN
+10:53:44.262 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:53:44.299 [Thread-15] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+10:53:44.303 [Thread-15] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+10:53:44.304 [Thread-15] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+10:53:44.314 [Thread-15] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing FeignContext-lvzheng-service: startup date [Fri Jul 27 10:52:53 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3382a81e
+10:53:44.316 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:53:44.328 [Thread-15] INFO  c.n.d.DiscoveryClient - Shutting down DiscoveryClient ...
+10:53:47.334 [Thread-15] INFO  c.n.d.DiscoveryClient - Unregistering ...
+10:53:47.362 [Thread-15] INFO  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient
+10:53:47.365 [Thread-15] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
+10:53:47.371 [Thread-15] INFO  c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
+10:53:48.012 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@72bdd98b: startup date [Fri Jul 27 10:53:48 CST 2018]; root of context hierarchy
+10:53:48.056 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:53:48.060 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70fec4e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:53:48.176 [restartedMain] INFO  f.SpringcloudLvzhengApplication - No active profile set, falling back to default profiles: default
+10:53:48.179 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ccb2574: startup date [Fri Jul 27 10:53:48 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@72bdd98b
+10:53:49.311 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+10:53:49.370 [restartedMain] INFO  o.s.c.c.s.GenericScope - BeanFactory id=a18cc81e-33d8-3b8e-9b4e-7460a0ddde35
+10:53:49.384 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:53:49.419 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54e4c1ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:53:49.430 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70fec4e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:53:49.585 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+10:53:49.586 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+10:53:49.586 [restartedMain] INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+10:53:49.589 [restartedMain] INFO  o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+10:53:49.604 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+10:53:49.605 [localhost-startStop-1] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 1426 ms
+10:53:50.133 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+10:53:50.134 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+10:53:50.134 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10:53:50.134 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10:53:50.134 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+10:53:50.134 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpTraceFilter' to: [/*]
+10:53:50.134 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webMvcMetricsFilter' to: [/*]
+10:53:50.195 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-3 - Starting...
+10:53:50.202 [restartedMain] INFO  c.z.h.HikariDataSource - HikariPool-3 - Start completed.
+10:53:50.214 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+10:53:50.229 [restartedMain] INFO  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+10:53:50.291 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:53:50.401 [restartedMain] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing FeignContext-lvzheng-service: startup date [Fri Jul 27 10:53:50 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ccb2574
+10:53:50.413 [restartedMain] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10:53:50.593 [restartedMain] INFO  c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10:53:50.623 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:53:50.730 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ccb2574: startup date [Fri Jul 27 10:53:48 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@72bdd98b
+10:53:50.750 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getexcel],methods=[GET]}" onto public void flylvzheng.controller.ExcelTest.aaa(javax.servlet.http.HttpServletResponse)
+10:53:50.751 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/upload]}" onto public java.lang.String flylvzheng.controller.UploadDownController.upload(org.springframework.web.multipart.MultipartFile)
+10:53:50.751 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/batch],methods=[POST]}" onto public java.lang.String flylvzheng.controller.UploadDownController.handleFileUpload(javax.servlet.http.HttpServletRequest)
+10:53:50.751 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/download],methods=[GET]}" onto public java.lang.String flylvzheng.controller.UploadDownController.downloadFile(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:53:50.752 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.get()
+10:53:50.752 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/save],methods=[POST]}" onto public java.lang.Object flylvzheng.controller.UserController.save(flylvzheng.bean.Emp)
+10:53:50.753 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/up],methods=[PUT]}" onto public java.lang.Object flylvzheng.controller.UserController.up(flylvzheng.bean.Emp)
+10:53:50.753 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/getfeign],methods=[GET]}" onto public java.lang.Object flylvzheng.controller.UserController.getfeign()
+10:53:50.753 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get1/{name}/{age}]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get1(java.lang.String,java.lang.String)
+10:53:50.753 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/get2]}" onto public java.util.List<flylvzheng.bean.world.User> flylvzheng.controller.UserController.get2()
+10:53:50.754 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/get],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.index()
+10:53:50.754 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/upload],methods=[POST]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.singleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+10:53:50.754 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/fastdfs/uploadStatus],methods=[GET]}" onto public java.lang.String flylvzheng.fastdfs.UploadController.uploadStatus()
+10:53:50.756 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10:53:50.756 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:53:50.784 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:53:50.784 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:53:51.087 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+10:53:51.175 [restartedMain] INFO  o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+10:53:51.178 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+10:53:51.178 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+10:53:51.179 [restartedMain] INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping - Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:53:51.223 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+10:53:51.225 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+10:53:51.228 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'environmentManager' has been autodetected for JMX exposure
+10:53:51.229 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'refreshScope' has been autodetected for JMX exposure
+10:53:51.230 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+10:53:51.234 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+10:53:51.237 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+10:53:51.240 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=2ccb2574,type=ConfigurationPropertiesRebinder]
+10:53:51.248 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+10:53:51.261 [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+10:53:51.263 [restartedMain] INFO  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
+10:53:51.273 [restartedMain] INFO  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
+10:53:51.280 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+10:53:51.280 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+10:53:51.280 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+10:53:51.280 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+10:53:51.359 [restartedMain] INFO  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+10:53:51.361 [restartedMain] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:53:51.361 [restartedMain] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:53:51.361 [restartedMain] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:53:51.361 [restartedMain] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:53:51.361 [restartedMain] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:53:51.361 [restartedMain] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:53:51.361 [restartedMain] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:53:51.370 [restartedMain] INFO  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+10:53:51.372 [restartedMain] INFO  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+10:53:51.373 [restartedMain] INFO  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1532660031373 with initial instances count: 0
+10:53:51.377 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application lvzheng-service with eureka with status UP
+10:53:51.377 [restartedMain] INFO  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1532660031377, current=UP, previous=STARTING]
+10:53:51.379 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:53:51.411 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+10:53:51.411 [restartedMain] INFO  o.a.t.u.n.NioSelectorPool - Using a shared selector for servlet write/read
+10:53:51.413 [restartedMain] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+10:53:51.414 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 9999
+10:53:51.414 [restartedMain] INFO  f.SpringcloudLvzhengApplication - Started SpringcloudLvzhengApplication in 3.51 seconds (JVM running for 184.165)
+10:53:51.422 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+10:54:00.923 [http-nio-9999-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+10:54:00.923 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+10:54:00.929 [http-nio-9999-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 6 ms
+10:54:21.376 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Disable delta property : false
+10:54:21.378 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+10:54:21.378 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Force full registry fetch : false
+10:54:21.378 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application is null : false
+10:54:21.378 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+10:54:21.378 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Application version is -1: true
+10:54:21.379 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+10:54:21.385 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:54:29.675 [Thread-36] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ccb2574: startup date [Fri Jul 27 10:53:48 CST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@72bdd98b
+10:54:29.677 [Thread-36] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application lvzheng-service with eureka with status DOWN
+10:54:29.678 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.n.d.DiscoveryClient - DiscoveryClient_LVZHENG-SERVICE/10.116.58.34:lvzheng-service:9999: registering service...
+10:54:29.680 [Thread-36] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+10:54:29.686 [Thread-36] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+10:54:29.686 [Thread-36] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+10:54:29.689 [Thread-36] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing FeignContext-lvzheng-service: startup date [Fri Jul 27 10:53:50 CST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ccb2574
+10:54:29.692 [Thread-36] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:54:29.697 [Thread-36] INFO  c.n.d.DiscoveryClient - Shutting down DiscoveryClient ...
+10:54:32.703 [Thread-36] INFO  c.n.d.DiscoveryClient - Unregistering ...
+10:54:32.716 [Thread-36] INFO  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient
+10:54:32.722 [Thread-36] INFO  c.z.h.HikariDataSource - HikariPool-3 - Shutdown initiated...
+10:54:32.729 [Thread-36] INFO  c.z.h.HikariDataSource - HikariPool-3 - Shutdown completed.
