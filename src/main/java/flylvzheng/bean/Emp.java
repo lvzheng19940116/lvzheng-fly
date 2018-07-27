@@ -45,10 +45,10 @@ public class Emp {
 
 	// @ManyToOne(cascade={CascadeType.MERGE,CascadeType.REFRESH},fetch=FetchType.EAGER,optional=false)
 	// @JoinColumn(name="order_id")
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = true)
-	@JoinColumn(name = "ttt")
-	@JsonBackReference
-	private User user;
+//	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = true)
+//	@JoinColumn(name = "ttt")
+//	@JsonBackReference
+//	private User user;
 
 
 

@@ -18,8 +18,8 @@ public class User {
 	private int id;
 	private String name;
 	private String age;
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-	private List<Emp> list;
+	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	//private List<Emp> list;
 	
 	
 }
