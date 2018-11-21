@@ -27,6 +27,8 @@ public class Emp {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int eid;
 	private String name;
+	private String sect;
+	private String effort;
     @CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(updatable = false)

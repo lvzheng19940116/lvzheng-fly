@@ -1,5 +1,4 @@
 spring:
-  
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
@@ -9,51 +8,62 @@ spring:
     validation-query-timeout: 5000
     test-on-borrow: true
     test-on-connect: true
-    hikari:
-      data-source-properties:
-        cachePrepStmts: true
-        prepStmtCacheSize: 250
-        prepStmtCacheSqlLimit: 2048
-        useServerPrepStmts: true
-        maximumPoolSize: 30
-        minimumIdle: 5
-        autoCommit: true
-        useLocalSessionState: true
-        useLocalTransactionState: true
-        rewriteBatchedStatements: true
-        cacheResultSetMetadata: true
-        cacheServerConfiguration: true
-        elideSetAutoCommits: true
-        connectionTestQuery: SELECT 1
+#    hikari:
+#      data-source-properties:
+#        cachePrepStmts: true
+#        prepStmtCacheSize: 250
+#        prepStmtCacheSqlLimit: 2048
+#        useServerPrepStmts: true
+#        maximumPoolSize: 30
+#        minimumIdle: 5
+#        autoCommit: true
+#        useLocalSessionState: true
+#        useLocalTransactionState: true
+#        rewriteBatchedStatements: true
+#        cacheResultSetMetadata: true
+#        cacheServerConfiguration: true
+#        elideSetAutoCommits: true
+#        connectionTestQuery: SELECT 1
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
   jpa:
-    show-sql: true    
-    hibernate:  
-      #ddl-auto: update 
-      naming:  
-        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy  
+    show-sql: true
+#    hibernate:
+#      ddl-auto: update  #配置自动建表：updata:没有表新建，有表更新操作,控制台显示建表语句
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/lvzheng
+    elasticsearch:
+      # 配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
+      cluster-nodes: localhost:9300
+      # 默认为elasticsearch
+      cluster-name: lvzheng
+      repositories:
+        enabled: true
+
+
 #  security:
 #    user:
 #      name: admin
 #      password: admin
   application:
     name: lvzheng-service
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    service-url:
-      defaultZone: http://localhost:8888/eureka/ 
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8888/eureka/
       
 
 server:
   port: 9999
 
-logging:
-  level:
-    com.itmuch.cloud.feign.UserFeignClient: DEBUG
+#logging:
+#  level:
+#    com.itmuch.cloud.feign.UserFeignClient: DEBUG
+
 
 
 

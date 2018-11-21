@@ -2,6 +2,7 @@ package flylvzheng.controller;
 
 import java.util.List;
 
+import flylvzheng.utils.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import flylvzheng.bean.Emp;
 import flylvzheng.bean.world.User;
-import flylvzheng.feign.UserFeign;
 import flylvzheng.repository.EmpRepository;
 import flylvzheng.repository.worldRepository.UserRepository;
 
@@ -29,25 +29,33 @@ public class UserController {
 	@Autowired
 	private EmpRepository empRepository;
 	private final static Logger logger = LoggerFactory.getLogger(UserController.class);
-	@Autowired
-	private UserFeign userFeign;
-	@GetMapping(value = "/getfeign")
-	public Object getfeign() {
-	Object	 list= userFeign.get();
-		return list;
+//	@Autowired
+//	private UserFeign userFeign;
+//	@GetMapping(value = "/getfeign")
+//	public Object getfeign() {
+//	Object	 list= userFeign.get();
+//		return list;
+//	}
+
+
+
+	public static  String pro(){
+		String properties = FileUtil.getProperties("application.yml", "port");
+		return properties;
 	}
-	
-	
+
+
 	/**
-	 * 
-	 * @param user
+	 *
 	 * @return
 	 */
 	@GetMapping(value = "/get")
 	public Object get() {
+
+		String pro = pro();
 		List<Emp> findAll = empRepository.findAll();
 		logger.info("当前登陆人{},密码是{}",findAll.get(0).getName(),findAll.get(0).getName());
-		return findAll;
+		return pro;
 	}
 
 	@PostMapping(value = "save")

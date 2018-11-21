@@ -1,7 +1,5 @@
 package flylvzheng.feign;
 
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
 
 /**
 *以动手实践为荣,以只看不练为耻.
@@ -16,8 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 * @author LvZheng
 * 创建时间：2018年7月12日 下午8:36:07
 */
-@FeignClient(name="lvzheng-service")
-public interface UserFeign {
-	@GetMapping("/get")
-	public Object get() ;
-}
+//@FeignClient(name="lvzheng-service")
+//public interface UserFeign {
+//	@GetMapping("/get")
+//	public Object get() ;
+//}
