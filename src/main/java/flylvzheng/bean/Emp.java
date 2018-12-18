@@ -45,8 +45,4 @@ public class Emp {
 //	@JsonBackReference
 //	private User user;
 
-
-
-
-
 }
