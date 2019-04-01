@@ -1,9 +1,6 @@
-package flylvzheng.config;
+package flylvzheng.count;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-
-import java.io.Serializable;
+import lombok.Data;
 
 /**
  * 以动手实践为荣,以只看不练为耻.
@@ -16,8 +13,12 @@ import java.io.Serializable;
  * 以总结思考为荣,以不求甚解为耻.
  *
  * @author LvZheng
- * 创建时间：2018/12/17 下午2:53
+ * 创建时间：2019/1/21 下午3:09
  */
-public interface BaseDao<T,ID extends Serializable>  extends JpaRepository<T,ID> ,JpaSpecificationExecutor<T> {
-
+@Data
+public class CountDTO {
+    private String name;
+    private Integer count;
+    private String firsttime;
+    private String lasttiem;
 }

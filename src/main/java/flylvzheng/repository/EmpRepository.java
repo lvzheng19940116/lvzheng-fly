@@ -12,6 +12,4 @@ import java.util.List;
 public interface EmpRepository extends JpaRepository<Emp, Integer>{
 
 
-    List<Emp> findDistinctById();
-
 }

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +37,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 * 创建时间：2018年7月10日 上午11:43:45
 */
 @RestController
+@SuppressWarnings("all")
 public class UploadDownController {
 	
 	private static final Logger log = LoggerFactory.getLogger(UploadDownController.class);
@@ -143,8 +145,29 @@ public class UploadDownController {
         }
         return "下载失败";
     }
+    public Object login(@RequestParam("file") MultipartFile file) {
+        if (file.isEmpty()) {
+            // return "file is empty.";
+        }
 
-
+        String originalFilename = file.getOriginalFilename();
+        String newFileName = originalFilename.substring(originalFilename.lastIndexOf(".") - 1);
+        File file1 = null;
+        try {
+            File path = new File(ResourceUtils.getURL("classpath:").getPath());
+            File upload = new File(path.getAbsolutePath(), "static/tmpupload/");
+            if (!upload.exists()) {
+                upload.mkdirs();
+            }
+            String uploadPath = upload + "\\";
+            file1 = new File(uploadPath + originalFilename);
+            file.transferTo(file1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+      //  String aaa = madpUploadUtil.upload("MTA5N0FBOENGNUI5NDQ5NjkzRkU3NzBEQ0YzRDBDMTgxNTUxODU4NzI5OTQw", file1);
+        return null;
+    }
 	
 	
 	
