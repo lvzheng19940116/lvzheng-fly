@@ -39,7 +39,7 @@ public class UserController {
 //	@GetMapping(value = "/getfeign")
 //	public Object getfeign() {
 //	Object	 list= userFeign.get();
-//		return list;
+//		return list;˜
 //	}
 
 
