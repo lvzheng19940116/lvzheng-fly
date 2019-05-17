@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@EnableFeignClients
 public class SpringcloudLvzhengApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringcloudLvzhengApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringcloudLvzhengApplication.class, args);
+    }
 }

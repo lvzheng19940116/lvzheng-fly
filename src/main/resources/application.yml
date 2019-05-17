@@ -51,8 +51,8 @@ spring:
 #    user:
 #      name: admin
 #      password: admin
-  application:
-    name: lvzheng-service
+#  application:
+#    name: lvzheng-service
 #eureka:
 #  instance:
 #    preferIpAddress: true
