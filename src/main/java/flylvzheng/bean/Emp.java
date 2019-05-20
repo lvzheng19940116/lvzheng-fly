@@ -45,4 +45,15 @@ public class Emp {
 //	@JsonBackReference
 //	private User user;
 
+
+	public Emp(String name, String sect, String effort, Date date1, Date date2) {
+		this.name = name;
+		this.sect = sect;
+		this.effort = effort;
+		this.date1 = date1;
+		this.date2 = date2;
+	}
+
+	public Emp() {
+	}
 }
