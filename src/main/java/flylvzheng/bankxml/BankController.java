@@ -72,7 +72,7 @@ public class BankController {
     }
 
     @PostMapping("/post")
-    @ApiOperation("xml")
+    @ApiOperation(value = "银行",notes = "银行notes",responseContainer = "Bank",response = BankResponse.class)
     public BankResponse aaa(@RequestBody GetTransInfoBean getTransInfoBean) {
         String s = JaxbUtil.convertToXmlNoStandalone(getTransInfoBean);
         RestTemplate template = new RestTemplate();
@@ -90,13 +90,10 @@ public class BankController {
         getTransInfoBean.setInfo(new GetTransInfoBean.Info());
         getTransInfoBean.setSdk(new GetTransInfoBean.Sdk());
 
-
-
         GetTransInfoBean.Info info=new GetTransInfoBean.Info();
         info.setFunnam("");
         info.setDattyp("");
         info.setLgnnam("");
-
 
         GetTransInfoBean.Sdk sdk=new GetTransInfoBean.Sdk();
         sdk.setBbknbr("");

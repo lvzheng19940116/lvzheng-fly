@@ -33,8 +33,13 @@ import java.io.UnsupportedEncodingException;
  * 4.@XmlElement，指定一个字段或get/set方法映射到xml的节点。通过name属性定义这个根节点的名称。
  * <p>
  * 5.@XmlElementWrapper，为数组或集合定义一个父节点。通过name属性定义这个父节点的名称。
- * <p>
- * <p>
+ *
+ * @XmlElementWrapper(name = "reg_beans")
+ * @XmlElement(name = "reg_bean")
+         * <reg_beans>
+         *   <reg_bean>
+         *   </reg_bean>
+         * </reg_beans>
  * <p>
  * <p>
  * XmlRootElement: 将类或枚举类型映射到 XML 元素。JAXB中的注解，用来根据java类生成xml内容。
@@ -42,7 +47,6 @@ import java.io.UnsupportedEncodingException;
  * 当使用 @XmlRootElement 注释对顶层类或枚举类型进行注释时，类型值被表示为 XML 文档中的 XML 元素。
  * <p>
  * JAXB Annotation
- *
  * @XmlRootElement // xml 文件的根元素
  * @XmlElement
  * @XmlAccessorType // 控制默认情况下是否对字段或 Javabean 属性进行系列化。
