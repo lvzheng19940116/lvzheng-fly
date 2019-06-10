@@ -1,6 +1,6 @@
 package flylvzheng.utils;
 
-import flylvzheng.bean.RedisConfig;
+import flylvzheng.static_value.RedisConfig;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;

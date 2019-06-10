@@ -74,5 +74,10 @@ server:
 #    com.itmuch.cloud.feign.UserFeignClient: DEBUG
 
 
-
+jdvop: http://bizapi.jd.com
+grant_type: access_token
+client_id: PGLjA7gNCfUsxryKD3SD
+client_secret: w4lcjqtHFCUqHvluT8eZ
+username: 联想百应VOP
+password: lianxiangbaiying666
 

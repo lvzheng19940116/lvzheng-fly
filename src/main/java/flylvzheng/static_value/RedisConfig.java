@@ -1,4 +1,4 @@
-package flylvzheng.bean;
+package flylvzheng.static_value;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
