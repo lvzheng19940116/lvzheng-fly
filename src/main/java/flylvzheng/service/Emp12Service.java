@@ -1,4 +1,6 @@
-package flylvzheng.service.impl;
+package flylvzheng.service;
+
+import flylvzheng.bean.Emp;
 
 /**
  * 以动手实践为荣,以只看不练为耻.
@@ -13,15 +15,7 @@ package flylvzheng.service.impl;
  * @author LvZheng
  * 创建时间：2019/4/23 下午2:56
  */
+public interface Emp12Service {
 
-import flylvzheng.service.Emp12Service;
-import org.springframework.stereotype.Service;
-
-
-@Service
-public class Emp2ServiceImpl implements Emp12Service {
-    @Override
-    public String list() {
-        return "Emp2ServiceImpl";
-    }
+    String list();
 }

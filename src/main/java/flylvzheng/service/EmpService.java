@@ -1,6 +1,8 @@
 package flylvzheng.service;
 
 import flylvzheng.bean.Emp;
+import flylvzheng.form.EmpForm;
+import org.springframework.data.domain.Page;
 
 /**
  * 以动手实践为荣,以只看不练为耻.
@@ -13,9 +15,9 @@ import flylvzheng.bean.Emp;
  * 以总结思考为荣,以不求甚解为耻.
  *
  * @author LvZheng
- * 创建时间：2019/4/23 下午2:56
+ * 创建时间：2019/6/14 下午5:41
  */
 public interface EmpService {
 
-    String list();
+    Page<Emp> findAll(EmpForm empForm);
 }

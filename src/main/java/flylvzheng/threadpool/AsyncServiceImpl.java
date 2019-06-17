@@ -1,6 +1,7 @@
-package flylvzheng.service.impl;
+package flylvzheng.threadpool;
 
-import flylvzheng.service.Emp12Service;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,12 +15,20 @@ import org.springframework.stereotype.Service;
  * 以总结思考为荣,以不求甚解为耻.
  *
  * @author LvZheng
- * 创建时间：2019/4/23 下午2:56
+ * 创建时间：2019/6/12 下午5:08
  */
 @Service
-public class Emp1ServiceImpl  implements Emp12Service {
+@Slf4j
+public class AsyncServiceImpl implements AsyncService {
     @Override
-    public String list() {
-        return "Emp1ServiceImpl";
+    @Async("asyncServiceExecutor")
+    public void executeAsync() {
+        log.info("start executeAsync");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        log.info("end executeAsync");
     }
 }

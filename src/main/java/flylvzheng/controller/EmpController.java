@@ -4,18 +4,17 @@ import flylvzheng.bean.Emp;
 import flylvzheng.exception.Code;
 import flylvzheng.exception.MyException;
 import flylvzheng.exception.Response;
-import flylvzheng.exception.User;
+import flylvzheng.form.EmpForm;
 import flylvzheng.repository.EmpRepository;
+import flylvzheng.service.Emp12Service;
 import flylvzheng.service.EmpService;
-import flylvzheng.service.impl.Emp1ServiceImpl;
-import flylvzheng.service.impl.Emp2ServiceImpl;
-import org.apache.poi.ss.formula.functions.T;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,6 +35,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("emp")
+@Slf4j
 public class EmpController {
 
 
@@ -44,11 +44,23 @@ public class EmpController {
 
     @Qualifier("emp1ServiceImpl")
     @Autowired
-    private EmpService empService1;
+    private Emp12Service empService1;
 
     @Qualifier("emp2ServiceImpl")
     @Autowired
-    private EmpService empService2;
+    private Emp12Service empService2;
+
+
+    @Autowired
+    private EmpService empService;
+
+    @GetMapping("/list")
+    public Object getAll(@RequestBody EmpForm empForm) {
+
+        Page<Emp> all = empService.findAll(empForm);
+        return all;
+    }
+
 
     @GetMapping("emp")
     public Response<?> get() {
@@ -67,16 +79,17 @@ public class EmpController {
     @GetMapping("str")
     public Page<Emp> string() {
 //        //多态
-//        EmpService e=new Emp1ServiceImpl();
-//        EmpService e2=new Emp2ServiceImpl();
+//        Emp12Service e=new Emp1ServiceImpl();
+//        Emp12Service e2=new Emp2ServiceImpl();
 //
 //        String list = empService1.list();
 //        String list1 = empService2.list();
 //        return list + list1;
 
-        PageRequest pageRequest =  PageRequest.of(0,
+        PageRequest pageRequest = PageRequest.of(0,
                 1);
         Page<Emp> aa = empRepository.findAllByName(pageRequest, "吕正");
+        log.info("start");
         return aa;
     }
 

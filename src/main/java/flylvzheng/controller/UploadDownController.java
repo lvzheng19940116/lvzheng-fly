@@ -59,6 +59,7 @@ public class UploadDownController {
             String path = filePath + fileName;
             File dest = new File(path);
             // 检测是否存在目录
+            String p1 = System.getProperty("user.dir");
             if (!dest.getParentFile().exists()) {
                 dest.getParentFile().mkdirs();// 新建文件夹
             }

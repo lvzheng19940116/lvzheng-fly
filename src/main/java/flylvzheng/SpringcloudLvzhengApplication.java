@@ -3,6 +3,7 @@ package flylvzheng;
 import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
@@ -11,6 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 //@EnableFeignClients
 @EnableSwagger2
 @EnableSwaggerBootstrapUI//doc.html    /swagger-ui.html
+@EnableAsync
 public class SpringcloudLvzhengApplication {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package flylvzheng.service.impl;
+package flylvzheng.threadpool;
 
 /**
  * 以动手实践为荣,以只看不练为耻.
@@ -11,17 +11,11 @@ package flylvzheng.service.impl;
  * 以总结思考为荣,以不求甚解为耻.
  *
  * @author LvZheng
- * 创建时间：2019/4/23 下午2:56
+ * 创建时间：2019/6/12 下午5:08
  */
-
-import flylvzheng.service.Emp12Service;
-import org.springframework.stereotype.Service;
-
-
-@Service
-public class Emp2ServiceImpl implements Emp12Service {
-    @Override
-    public String list() {
-        return "Emp2ServiceImpl";
-    }
+public interface AsyncService {
+    /**
+     * 执行异步任务
+     */
+    void executeAsync();
 }
