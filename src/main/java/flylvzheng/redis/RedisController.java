@@ -48,6 +48,7 @@ public class RedisController {
             System.out.println("删除键 1:" + jedis.del("1"));
             System.out.println("判断键 1是否存在：" + jedis.exists("1"));
             System.out.println("设置键 2的过期时间为5s:" + jedis.expire("2", 5));
+            //TimeUnit是java.util.concurrent包下面的一个类，TimeUnit提供了可读性更好的线程暂停操作，通常用来替换Thread.sleep()
             TimeUnit.SECONDS.sleep(2);
             System.out.println("查看键 2的剩余生存时间：" + jedis.ttl("2"));
             System.out.println("移除键 2的生存时间：" + jedis.persist("2"));
@@ -86,8 +87,21 @@ public class RedisController {
             System.out.println("删除多个键值对：" + jedis.del(new String[]{"key01", "key02"}));
             System.out.println("获取多个键值对：" + jedis.mget("key01", "key02", "key03"));
 
+            //删除当前所选数据库的所有键
             jedis.flushDB();
+
             System.out.println("新增键值对防止覆盖原先值:");
+            /*
+             * SETNX ：SET if Not eXists （如果不存在，则 SET)的简写；
+             * 隐藏的意思是：key存在的情况下，不操作redis内存；也就是返回值是0
+             * 具体java代码要依赖于：jedis的jar包
+             * Long result = jedis.setnx(key, value);
+             * 返回值result ：设置成功，返回 1 。设置失败，返回 0 
+             *
+             *  todo 分布式锁
+             * 在做定时任务前；判定一下能否在redis中做setnx；如果返回1，继续执行；返回0，不执行；
+             */
+            Long setnx = jedis.setnx("key001", "value001");
             System.out.println(jedis.setnx("key001", "value001"));
             System.out.println(jedis.setnx("key002", "value002"));
             System.out.println(jedis.setnx("key002", "value002-new"));
