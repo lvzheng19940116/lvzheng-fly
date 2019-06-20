@@ -13,11 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,7 +33,7 @@ import java.util.List;
  * 创建时间：2019/4/23 上午10:09
  */
 @RestController
-@RequestMapping("emp")
+@RequestMapping("/emp")
 @Slf4j
 public class EmpController {
 
@@ -54,6 +53,14 @@ public class EmpController {
     @Autowired
     private EmpService empService;
 
+
+    @PostMapping("/save")
+    public Object save() {
+        Emp emp=new Emp();
+        emp.setDate1(new Date());
+        return emp;
+    }
+
     @GetMapping("/list")
     public Object getAll(@RequestBody EmpForm empForm) {
 
@@ -61,8 +68,7 @@ public class EmpController {
         return all;
     }
 
-
-    @GetMapping("emp")
+    @GetMapping("/emp")
     public Response<?> get() {
 
         List<Emp> bySectIsNotNull = empRepository.findBySectIsNotNull();
