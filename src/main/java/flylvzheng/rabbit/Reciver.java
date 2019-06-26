@@ -19,10 +19,10 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+@RabbitListener(queues = "fly")
 public class Reciver {
 
     @RabbitHandler
-    @RabbitListener(queues = "fly")
     public void process(String aaa) {
         System.out.print("reciver:" + aaa);
     }
