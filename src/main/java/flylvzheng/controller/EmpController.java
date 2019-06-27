@@ -1,6 +1,7 @@
 package flylvzheng.controller;
 
 import flylvzheng.bean.Emp;
+import flylvzheng.bean.world.User;
 import flylvzheng.exception.Code;
 import flylvzheng.exception.MyException;
 import flylvzheng.exception.Response;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 以动手实践为荣,以只看不练为耻.
@@ -56,7 +58,7 @@ public class EmpController {
 
     @PostMapping("/save")
     public Object save() {
-        Emp emp=new Emp();
+        Emp emp = new Emp();
         emp.setDate1(new Date());
         return emp;
     }
@@ -65,6 +67,17 @@ public class EmpController {
     public Object getAll(@RequestBody EmpForm empForm) {
 
         Page<Emp> all = empService.findAll(empForm);
+        List<Emp> content = all.getContent();
+        List<User> users = content.stream().map(emp -> {
+            User user = new User();
+            user.setHobby(emp.getEffort());
+            return user;
+        }).collect(Collectors.toList());
+
+        content.stream().filter(emp -> emp.getEffort().equals(""))
+                        .limit(5)
+                        .collect(Collectors.toList());
+
         return all;
     }
 
