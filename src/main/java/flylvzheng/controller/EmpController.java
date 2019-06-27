@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -68,15 +69,28 @@ public class EmpController {
 
         Page<Emp> all = empService.findAll(empForm);
         List<Emp> content = all.getContent();
+
+
+        List<String> list = content.stream().map(Emp::getEffort).collect(Collectors.toList());
+
         List<User> users = content.stream().map(emp -> {
             User user = new User();
             user.setHobby(emp.getEffort());
             return user;
         }).collect(Collectors.toList());
 
-        content.stream().filter(emp -> emp.getEffort().equals(""))
-                        .limit(5)
-                        .collect(Collectors.toList());
+        List<Emp> emps = content.stream().filter(emp -> emp.getEffort().equals(""))
+                .limit(5)
+                .collect(Collectors.toList());
+
+        Map<String, String> string = all.stream().collect(Collectors.toMap(Emp::getEffort, Emp::getEffort
+                , (key1, key2) -> key1));
+
+        Map<String, User> map = all.stream().collect(Collectors.toMap(Emp::getEffort, emp -> {
+            User user = new User();
+            user.setHobby(emp.getEffort());
+            return user;
+        }, (key1, key2) -> key1));
 
         return all;
     }
