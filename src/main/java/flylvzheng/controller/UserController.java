@@ -10,6 +10,8 @@ import java.util.List;
 import flylvzheng.count.CountFilter;
 import flylvzheng.utils.FileUtil;
 import org.elasticsearch.search.suggest.completion.RegexOptions;
+import org.hibernate.Session;
+import org.hibernate.jpa.HibernateEntityManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,25 +24,44 @@ import flylvzheng.repository.worldRepository.UserRepository;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author LvZheng 2018年1月19日下午3:22:43
  */
 @RestController
+@SuppressWarnings("all")
 public class UserController {
     @Autowired
     private UserRepository userRepository;
     @Autowired
     private EmpRepository empRepository;
+
+    @PersistenceContext
+    private EntityManager entityManager;
+
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
-//	@Autowired
-//	private UserFeign userFeign;
-//	@GetMapping(value = "/getfeign")
-//	public Object getfeign() {
-//	Object	 list= userFeign.get();
-//		return list;˜
-//	}
+/**	@Autowired
+	private UserFeign userFeign;
+	@GetMapping(value = "/getfeign")
+	public Object getfeign() {
+	Object	 list= userFeign.get();
+		return list;˜
+	}*/
+
+    /**
+     * 解决jpa session问题
+     */
+    public void session() {
+        //可以使用
+        entityManager.clear();
+       //session问题
+        HibernateEntityManager hEntityManager = (HibernateEntityManager) entityManager;
+        Session session = hEntityManager.getSession();
+        session.evict("");
+    }
 
 
     public static String pro() {
@@ -59,7 +80,7 @@ public class UserController {
 
 
         //"count:LV"   jedis 创建count文件夹  key 是 count:LV
-     //   CountFilter.count("count:LVZHENG");
+        //   CountFilter.count("count:LVZHENG");
         //return "success";
         String str = "";
         String macAddress = "";
@@ -67,14 +88,14 @@ public class UserController {
             System.out.println(ipAddress);
             Process p = Runtime.getRuntime()
                     .exec("nbtstat -A " + ipAddress);
-            System.out.println("===process=="+p);
+            System.out.println("===process==" + p);
             InputStreamReader ir = new InputStreamReader(p.getInputStream());
 
             BufferedReader br = new BufferedReader(ir);
 
             while ((str = br.readLine()) != null) {
-                if(str.indexOf("MAC")>1){
-                    macAddress = str.substring(str.indexOf("MAC")+9, str.length());
+                if (str.indexOf("MAC") > 1) {
+                    macAddress = str.substring(str.indexOf("MAC") + 9, str.length());
                     macAddress = macAddress.trim();
                     System.out.println("macAddress:" + macAddress);
                     break;
@@ -86,9 +107,6 @@ public class UserController {
         } catch (IOException ex) {
         }
         return macAddress;
-
-
-
 
 
         //获取自己的物理地址
