@@ -1,6 +1,7 @@
 package flylvzheng.kafka;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -14,11 +15,14 @@ public class KafkaConsumer {
 
     /**
      * 有消息就读取
-     * @param message
+     * @param record
      */
     @KafkaListener(topics = {"lvzheng"})
-    public void receiveMessage(String message){
-      log.info("consumer:{}",message);
+    public void receiveMessage(ConsumerRecord<?, ?> record){
+
+        long offset = record.offset();
+        log.info("offset:{}",offset);
+        log.info("consumer:{}",record.value());
     }
 }
 
