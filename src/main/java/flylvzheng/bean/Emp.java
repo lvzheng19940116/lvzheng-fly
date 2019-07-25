@@ -35,6 +35,7 @@ public class Emp {
     private String name;
     private String sect;
     private String effort;
+    private String age;
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(updatable = false)

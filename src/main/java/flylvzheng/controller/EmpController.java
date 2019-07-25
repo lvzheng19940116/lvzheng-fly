@@ -126,4 +126,11 @@ public class EmpController {
         return aa;
     }
 
+
+    @GetMapping("desc")
+    public Emp desc() {
+
+        return empRepository.findFirstByOrderByAgeDesc();
+    }
+
 }

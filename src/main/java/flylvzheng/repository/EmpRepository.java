@@ -19,4 +19,7 @@ public interface EmpRepository extends JpaRepository<Emp, Integer>,JpaSpecificat
 
     Page<Emp> findAllByName(Pageable pageable, String add);
 
+
+    Emp findFirstByOrderByAgeDesc();
+
 }
