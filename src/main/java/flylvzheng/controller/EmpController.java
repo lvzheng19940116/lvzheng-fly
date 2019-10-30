@@ -70,27 +70,34 @@ public class EmpController {
         Page<Emp> all = empService.findAll(empForm);
         List<Emp> content = all.getContent();
 
-
+        //多添件过滤
+        List<Emp> collect = content.stream().filter(emp -> emp.getEffort().equals("") && emp.getAge().equals("")).collect(Collectors.toList());
+        // 取某个字段
         List<String> list = content.stream().map(Emp::getEffort).collect(Collectors.toList());
 
+        //返回新的对象
         List<User> users = content.stream().map(emp -> {
             User user = new User();
             user.setHobby(emp.getEffort());
             return user;
         }).collect(Collectors.toList());
 
+        //根据条件取多少条
         List<Emp> emps = content.stream().filter(emp -> emp.getEffort().equals(""))
                 .limit(5)
                 .collect(Collectors.toList());
 
+        //list to  map
         Map<String, String> string = all.stream().collect(Collectors.toMap(Emp::getEffort, Emp::getEffort
                 , (key1, key2) -> key1));
 
+        //  list to map  value是对象
         Map<String, User> map = all.stream().collect(Collectors.toMap(Emp::getEffort, emp -> {
             User user = new User();
             user.setHobby(emp.getEffort());
             return user;
         }, (key1, key2) -> key1));
+
 
         return all;
     }

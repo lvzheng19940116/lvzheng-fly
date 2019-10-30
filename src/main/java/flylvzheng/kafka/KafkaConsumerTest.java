@@ -21,7 +21,7 @@ public class KafkaConsumerTest {
      *
      * @param record
      */
-    @KafkaListener(topics = {"lvzheng"})
+    @KafkaListener(topics ="${topic}")
     public void receiveMessage(ConsumerRecord<?, ?> record) {
         long offset = record.offset();
         // 手动提交
