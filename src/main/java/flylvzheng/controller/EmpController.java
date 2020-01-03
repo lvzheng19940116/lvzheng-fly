@@ -17,9 +17,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -97,6 +95,9 @@ public class EmpController {
             user.setHobby(emp.getEffort());
             return user;
         }, (key1, key2) -> key1));
+
+        //根据某个字段去重复
+        List<Emp> collect1 = all.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(Emp::getEffort))), ArrayList::new));
 
 
         return all;
