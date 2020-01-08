@@ -1,5 +1,6 @@
 package flylvzheng.bean;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -33,6 +34,7 @@ public class Emp {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int eid;
     private String name;
+    private BigDecimal money;
     private String sect;
     private String effort;
     private String age;

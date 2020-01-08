@@ -17,6 +17,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -101,7 +102,12 @@ public class EmpController {
         List<Emp> collect1 = all.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(Emp::getEffort))), ArrayList::new));
         log.info("根据门派去重复{}",JSON.toJSONString(collect1));
 
-        return collect1;
+        //分组求和
+        Map<String, BigDecimal> mapRec = all.stream().collect(Collectors.groupingBy(Emp::getEffort, Collectors.reducing(BigDecimal.ZERO, Emp::getMoney, BigDecimal::add)));
+        mapRec.forEach((a,b)->{
+            log.info("根据门派去重复{}",a+b);
+        });
+        return map;
     }
 
     @GetMapping("/emp")
