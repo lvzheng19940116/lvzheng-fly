@@ -39,7 +39,7 @@ public class EmpServiceImpl  implements EmpService {
     @Override
     public Page<Emp> findAll(EmpForm empForm) {
 
-        Pageable of = PageRequest.of(empForm.getIndex()-1, empForm.getSize(), new Sort(Sort.Direction.DESC, "date1", "date2"));
+        Pageable of = PageRequest.of(empForm.getIndex()-1, empForm.getSize(), new Sort(Sort.Direction.ASC, "eid", "date1"));
 
 
         Specification<Emp> specification=(root ,query ,cb)->{

@@ -1,5 +1,6 @@
 package flylvzheng.controller;
 
+import com.alibaba.fastjson.JSON;
 import flylvzheng.bean.Emp;
 import flylvzheng.bean.world.User;
 import flylvzheng.exception.Code;
@@ -98,9 +99,9 @@ public class EmpController {
 
         //根据某个字段去重复
         List<Emp> collect1 = all.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(Emp::getEffort))), ArrayList::new));
+        log.info("根据门派去重复{}",JSON.toJSONString(collect1));
 
-
-        return all;
+        return collect1;
     }
 
     @GetMapping("/emp")
