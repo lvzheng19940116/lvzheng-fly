@@ -33,9 +33,9 @@ spring:
 #    hibernate:
 #      ddl-auto: update  #配置自动建表：updata:没有表新建，有表更新操作,控制台显示建表语句
   redis:
-    host: 10.122.30.221
+    host: 127.0.0.1
     port: 6379
-    password: 8ik,9ol.
+    password:
   data:
     mongodb:
       uri: mongodb://localhost:27017/lvzheng

@@ -1,6 +1,8 @@
 package flylvzheng.redis;
 
 import flylvzheng.utils.RedisUtil;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import redis.clients.jedis.Jedis;
 
 import java.util.HashMap;
@@ -30,6 +32,8 @@ public class RedisController {
         jedis.incr("1");
 
     }
+
+
 
     /**
      * key功能展示
@@ -99,14 +103,14 @@ public class RedisController {
              * 返回值result ：设置成功，返回 1 。设置失败，返回 0 
              *
              *  todo 分布式锁
-             * 在做定时任务前；判定一下能否在redis中做setnx；如果返回1，继续执行；返回0，不执行；
+             * 在做定时任务前；判定一下能否在redis中做setnx；如果返回1，不存在，继续执行；返回0，不执行；
              */
             Long setnx = jedis.setnx("key001", "value001");
-            System.out.println(jedis.setnx("key001", "value001"));
-            System.out.println(jedis.setnx("key002", "value002"));
-            System.out.println(jedis.setnx("key002", "value002-new"));
-            System.out.println("获取键key001的值：" + jedis.get("key001"));
-            System.out.println("获取键key002的值：" + jedis.get("key002"));
+            System.out.println(jedis.setnx("key001", "value001"));//0
+            System.out.println(jedis.setnx("key002", "value002"));//1
+            System.out.println(jedis.setnx("key002", "value002-new"));//0
+            System.out.println("获取键key001的值：" + jedis.get("key001"));//value001
+            System.out.println("获取键key002的值：" + jedis.get("key002"));//value002
 
             System.out.println("新增键值对并设置有效时间:");
             System.out.println(jedis.setex("key003", 2, "value003"));
@@ -318,4 +322,5 @@ public class RedisController {
             e.printStackTrace();
         }
     }
+
 }

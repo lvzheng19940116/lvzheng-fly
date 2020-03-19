@@ -1,6 +1,7 @@
 package flylvzheng.utils;
 
 import flylvzheng.static_value.RedisConfig;
+import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;

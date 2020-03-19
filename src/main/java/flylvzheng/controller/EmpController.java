@@ -10,12 +10,14 @@ import flylvzheng.form.EmpForm;
 import flylvzheng.repository.EmpRepository;
 import flylvzheng.service.Emp12Service;
 import flylvzheng.service.EmpService;
+import flylvzheng.utils.RedisUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
+import redis.clients.jedis.Jedis;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -57,6 +59,11 @@ public class EmpController {
     private EmpService empService;
 
 
+
+    @GetMapping("/redis")
+    public  void reids(){
+
+    }
     @PostMapping("/save")
     public Object save() {
         Emp emp = new Emp();

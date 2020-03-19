@@ -22,7 +22,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "spring.redis")
-@PropertySource(value = "classpath:application.yml")
 public class RedisConfig {
     private static String host;
     private static int port;
