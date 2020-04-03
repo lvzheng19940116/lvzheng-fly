@@ -59,17 +59,42 @@ public class EmpController {
     private EmpService empService;
 
 
-
     @GetMapping("/redis")
-    public  void reids(){
+    public void reids() {
 
     }
+
     @PostMapping("/save")
     public Object save() {
         Emp emp = new Emp();
         emp.setDate1(new Date());
         return emp;
     }
+
+    /**
+     * collection.stream().forEach() → collection.forEach()
+     * collection.stream().collect(toList/toSet/toCollection()) → new CollectionType<>(collection)
+     * collection.stream().toArray() → collection.toArray()
+     * Arrays.asList().stream() → Arrays.stream() or Stream.of()
+     * IntStream.range(0, array.length).mapToObj(idx -> array[idx]) → Arrays.stream(array)
+     * IntStream.range(0, list.size()).mapToObj(idx -> list.get(idx)) → list.stream()
+     * Collections.singleton().stream() → Stream.of()
+     * Collections.emptyList().stream() → Stream.empty()
+     * stream.filter().findFirst().isPresent() → stream.anyMatch()
+     * stream.collect(counting()) → stream.count()
+     * stream.collect(maxBy()) → stream.max()
+     * stream.collect(mapping()) → stream.map().collect()
+     * stream.collect(reducing()) → stream.reduce()
+     * stream.collect(summingInt()) → stream.mapToInt().sum()
+     * stream.mapToObj(x -> x) → stream.boxed()
+     * stream.map(x -> {...; return x;}) → stream.peek(x -> ...)
+     * !stream.anyMatch() → stream.noneMatch()
+     * !stream.anyMatch(x -> !(...)) → stream.allMatch()
+     * stream.map().anyMatch(Boolean::booleanValue) -> stream.anyMatch()
+     * IntStream.range(expr1, expr2).mapToObj(x -> array[x]) -> Arrays.stream(array, expr1, expr2)
+     * Collection.nCopies(count, ...) -> Stream.generate().limit(count)
+     * stream.sorted(comparator).findFirst() -> Stream.min(comparator)
+     */
 
     @GetMapping("/list")
     public Object getAll(@RequestBody EmpForm empForm) {
@@ -107,12 +132,12 @@ public class EmpController {
 
         //根据某个字段去重复
         List<Emp> collect1 = all.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(Emp::getEffort))), ArrayList::new));
-        log.info("根据门派去重复{}",JSON.toJSONString(collect1));
+        log.info("根据门派去重复{}", JSON.toJSONString(collect1));
 
         //分组求和
         Map<String, BigDecimal> mapRec = all.stream().collect(Collectors.groupingBy(Emp::getEffort, Collectors.reducing(BigDecimal.ZERO, Emp::getMoney, BigDecimal::add)));
-        mapRec.forEach((a,b)->{
-            log.info("根据门派去重复{}",a+b);
+        mapRec.forEach((a, b) -> {
+            log.info("根据门派去重复{}", a + b);
         });
         return map;
     }
