@@ -34,4 +34,8 @@ public class RefUtil {
     }
 
 
+    public static void main(String[] args) {
+        String str="aaaa1";
+        System.out.println(str.substring(0,4));
+    }
 }
