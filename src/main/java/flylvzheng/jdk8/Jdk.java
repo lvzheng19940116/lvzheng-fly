@@ -1,8 +1,10 @@
 package flylvzheng.jdk8;
 
+import com.google.common.collect.Lists;
 import flylvzheng.bean.Emp;
 import net.bytebuddy.implementation.bytecode.Throw;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -14,6 +16,19 @@ import java.util.stream.Stream;
 
 
 public class Jdk {
+
+//    public static void main(String[] args) {
+//        List<BigDecimal> list= Lists.newArrayList(new BigDecimal(-100) ,new BigDecimal(-200));
+//        BigDecimal bigDecimal = list.stream().max(Comparator.comparing(BigDecimal::abs)).get();
+//        System.out.println(bigDecimal);
+//
+//        System.out.println(new BigDecimal(-100).compareTo( new BigDecimal(-200)));
+//        System.out.println(new BigDecimal(-90).subtract(new BigDecimal(-100)));
+//        System.out.println(new BigDecimal(-90).add(new BigDecimal(10)));
+//
+//    }
+
+
     public static void aaa() {
         //排序
         List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
