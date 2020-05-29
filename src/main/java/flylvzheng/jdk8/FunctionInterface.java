@@ -46,8 +46,6 @@ public class FunctionInterface {
         });
 
         Map<Boolean, List<String>> a2 = strings.stream().collect(groupingBy(a -> a.equals("a")));
-
-
         String collect = strings.stream().collect(joining(",", "[", "]"));
         System.out.println(collect);
         // todo 取出List中所有人的姓名放到一个新的List中去
@@ -55,7 +53,5 @@ public class FunctionInterface {
 //        List<String> userNames = listUser.stream().collect(Collectors.mapping(User::getName, Collectors.toList()));
         //  strings.stream().collect(groupingBy(a -> a.equals("a"),mapping("",toList())));
         new StringJoiner("");
-
-
     }
 }
