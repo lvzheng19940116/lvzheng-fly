@@ -1,17 +1,19 @@
 package flylvzheng.jdk8;
 
 import com.google.common.collect.Lists;
-import com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList;
-import com.sun.xml.internal.rngom.ast.builder.GrammarSection;
 
-import javax.validation.constraints.Max;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.StringJoiner;
+import java.util.TreeSet;
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.*;
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.partitioningBy;
+import static java.util.stream.Collectors.toCollection;
 
 /**
  * @author LvZheng
