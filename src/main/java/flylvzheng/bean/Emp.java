@@ -32,7 +32,7 @@ public class Emp {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int eid;
+    private Integer eid;
     private String name;
     private BigDecimal money;
     private String sect;

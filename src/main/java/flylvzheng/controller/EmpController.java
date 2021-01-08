@@ -139,6 +139,17 @@ public class EmpController {
         mapRec.forEach((a, b) -> {
             log.info("根据门派去重复{}", a + b);
         });
+        //一个集合变成两个集合 满足条件的是true
+        Map<Boolean, List<Emp>> listMap = all.stream().collect(Collectors.partitioningBy(a -> a.getEffort() != null));
+        //求最小
+        Emp emp = all.stream().collect(Collectors.maxBy(Comparator.comparing(a -> a.getEid()))).get();
+
+        Emp emp1 = all.stream().max(Comparator.comparing(Emp::getEid)).get();
+        //求平均值
+        Double averagingInt = all.stream().collect(Collectors.averagingInt(a -> a.getEid()));
+        //字符串拼接
+        all.stream().map(Emp::getEffort).collect(Collectors.joining(","));
+
         return map;
     }
 
