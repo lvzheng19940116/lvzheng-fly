@@ -94,6 +94,11 @@ public class EmpController {
      * IntStream.range(expr1, expr2).mapToObj(x -> array[x]) -> Arrays.stream(array, expr1, expr2)
      * Collection.nCopies(count, ...) -> Stream.generate().limit(count)
      * stream.sorted(comparator).findFirst() -> Stream.min(comparator)
+     *
+     *  parallelStream和Stream
+     *   size = 10 串行代码执行速度是并行的8倍
+     *   size = 100 速度相等
+     *   size=10000 并行是串行的2.5倍
      */
 
     @GetMapping("/list")
@@ -101,7 +106,6 @@ public class EmpController {
 
         Page<Emp> all = empService.findAll(empForm);
         List<Emp> content = all.getContent();
-
         //多添件过滤
         List<Emp> collect = content.stream().filter(emp -> emp.getEffort().equals("") && emp.getAge().equals("")).collect(Collectors.toList());
         // 取某个字段
@@ -130,9 +134,7 @@ public class EmpController {
             return user;
         }, (key1, key2) -> key1));
 
-        //根据某个字段去重复
-        List<Emp> collect1 = all.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(Emp::getEffort))), ArrayList::new));
-        log.info("根据门派去重复{}", JSON.toJSONString(collect1));
+
 
         //分组求和
         Map<String, BigDecimal> mapRec = all.stream().collect(Collectors.groupingBy(Emp::getEffort, Collectors.reducing(BigDecimal.ZERO, Emp::getMoney, BigDecimal::add)));
@@ -149,6 +151,14 @@ public class EmpController {
         Double averagingInt = all.stream().collect(Collectors.averagingInt(a -> a.getEid()));
         //字符串拼接
         all.stream().map(Emp::getEffort).collect(Collectors.joining(","));
+
+        all.stream().parallel().map(a->a.getEffort()).collect(Collectors.toList());
+
+        //根据某个字段去重复
+        List<Emp> empList = all.stream().collect(Collectors.collectingAndThen(Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(Emp::getEffort))), ArrayList::new));
+        log.info("根据门派去重复{}", JSON.toJSONString(empList));
+        //并行
+        empList.parallelStream().collect(Collectors.toList());
 
         return map;
     }
