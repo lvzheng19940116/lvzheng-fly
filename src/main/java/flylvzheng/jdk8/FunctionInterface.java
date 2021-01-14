@@ -1,14 +1,19 @@
 package flylvzheng.jdk8;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.StringJoiner;
 import java.util.TreeSet;
 import java.util.function.BinaryOperator;
+import java.util.function.IntBinaryOperator;
+import java.util.function.IntUnaryOperator;
 import java.util.function.Predicate;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.joining;
@@ -22,7 +27,61 @@ import static java.util.stream.Collectors.toCollection;
 public class FunctionInterface {
 
     public static void main(String[] args) {
-        add();
+
+        //parallelSort方法对数组进行排序，这方法与传统的sort()方法大致相似，该方法的功能与传统的sort()方法大致相似
+        //只是在多cpu上有更好的性能
+        int[] arr1 = new int[]{3, -4, 25, 16, 30, 18};
+        //对数组进行并发排序
+        Arrays.parallelSort(arr1);
+        System.out.println(Arrays.toString(arr1));
+
+
+        int[] arr2 = new int[]{3, -4, 25, 16, 30, 18};
+        Arrays.parallelPrefix(arr2, new IntBinaryOperator() {
+
+            public int applyAsInt(int left, int right) {
+                //left代表数组中前一个索引处的元素，计算第一个元素时，left为1
+                //right代表数组中当前索引处的元素
+                return left * right;
+            }
+        });
+        System.out.println(Arrays.toString(arr2));
+
+        int[] arr3 = new int[5];
+        Arrays.parallelSetAll(arr3, new IntUnaryOperator() {
+
+            public int applyAsInt(int operand) {
+                //operand代表正在计算的元素的索引
+                return operand * 5;
+            }
+        });
+        System.out.println(Arrays.toString(arr3));
+
+
+        // add();
+        int n = 5;
+        double[] values = {1, 2, 3};
+        double[] sums = Arrays.copyOf(values, values.length);
+        System.out.println(JSON.toJSONString(sums));
+
+        Arrays.parallelPrefix(sums, Double::sum);
+        System.out.println(JSON.toJSONString(sums));
+
+        Arrays.parallelSetAll(sums, a -> a + 3);
+        System.out.println(JSON.toJSONString(sums));
+
+        Arrays.parallelSort(sums);
+        System.out.println(JSON.toJSONString(sums));
+
+        int start = n - 1;
+        double[] doubles = IntStream.range(start, sums.length).mapToDouble(i -> {
+            System.out.println(i);
+            double prfix = i == start ? 0 : sums[i - n];
+            System.out.println("---" + prfix);
+            return (sums[i] - prfix) / n;
+        }).toArray();
+        System.out.println(JSON.toJSONString(doubles));
+
     }
 
     public static void add() {
