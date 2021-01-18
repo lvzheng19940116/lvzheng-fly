@@ -59,12 +59,12 @@ public class Arrays8 {
      * 
      * 多线程：
      * <p>
-     * 9.parallelPrefix：二元迭代，对原数组内容进行二元操作
+     * 9.parallelPrefix：二元迭代，对原数组内容进行二元操作 计算数组的和
      * <p>
      * parallelPrefix(T[] array, BinaryOperator<T> op):void
      * parallelPrefix(T[] array, int fromIndex, int toIndex,BinaryOperator<T> op):void
      * 
-     * 10.parallelSetAll：一个数组全部做表达式操作
+     * 10.parallelSetAll：一个数组全部做表达式操作 更新数组元素
      * <p>
      * parallelSetAll(T[] array, IntFunction<? extends T> generator):void
      * 
