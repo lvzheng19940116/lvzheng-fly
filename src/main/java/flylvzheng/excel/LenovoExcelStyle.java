@@ -1,7 +1,6 @@
 package flylvzheng.excel;
 
 
-
 import cn.afterturn.easypoi.excel.export.styler.AbstractExcelExportStyler;
 import cn.afterturn.easypoi.excel.export.styler.IExcelExportStyler;
 import org.apache.poi.hssf.util.HSSFColor;
@@ -23,7 +22,7 @@ public class LenovoExcelStyle extends AbstractExcelExportStyler implements IExce
         CellStyle headerStyle = workbook.createCellStyle();
         Font font = workbook.createFont();
         font.setFontHeightInPoints((short) 24);
-        font.setColor(HSSFColor.BLUE.index);
+        font.setColor((short) 24);
         headerStyle.setFont(font);
         headerStyle.setFillForegroundColor(headerColor);
         headerStyle.setAlignment(HorizontalAlignment.CENTER);

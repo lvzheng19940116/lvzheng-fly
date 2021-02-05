@@ -1,11 +1,11 @@
-/**  
+/**
  * Title: HttpClientUtil.java
- * Description:   
- * Copyright: Copyright (c) 2019 
+ * Description:
+ * Copyright: Copyright (c) 2019
  * Company: www.samsundot.com
- * @author Ace Nada  
- * @date 2019年11月19日  
- * @version 1.0  
+ * @author Ace Nada
+ * @date 2019年11月19日
+ * @version 1.0
  */
 package flylvzheng.utils.https;
 
@@ -44,13 +44,13 @@ import java.util.Map;
 /**
  * Title: HttpClientUtil Description: Copyright: Copyright (c) 2019 Company:
  * www.samsundot.com
- * 
+ *
  * @author Ace Nada
  * @date 2019年11月19日
  * @version 1.0
  */
 
-@Component
+//@Component
 public class HttpClientUtil {
 
 	public static String host;
@@ -59,17 +59,17 @@ public class HttpClientUtil {
 
 	public static String secret;
 
-	@Value("${face.host}")
+	//@Value("${face.host}")
 	public void setHost(String host) {
 		HttpClientUtil.host = host;
 	}
 
-	@Value("${face.id}")
+	//@Value("${face.id}")
 	public void setId(String id) {
 		HttpClientUtil.id = id;
 	}
 
-	@Value("${face.secret}")
+	//@Value("${face.secret}")
 	public void setSecret(String secret) {
 		HttpClientUtil.secret = secret;
 	}

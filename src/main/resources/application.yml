@@ -43,7 +43,7 @@ spring:
       # 配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
       cluster-nodes: localhost:9300
       # 默认为elasticsearch
-      cluster-name: lvzheng
+      cluster-name: lz
       repositories:
         enabled: true
   rabbitmq:
