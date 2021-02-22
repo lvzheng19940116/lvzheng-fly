@@ -8,6 +8,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -96,7 +97,10 @@ public class ExecutorConfig {
 
         return new ThreadPoolExecutor(corePoolSize, maximumPoolSize,
                 0L, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>());
+                new LinkedBlockingQueue<Runnable>(10));
+        //     LinkedBlockingQueue 默认 2147483647
+        //公平队列  先进先出 fifo
+        //    ArrayBlockingQueue a=   new ArrayBlockingQueue(100,true);
     }
 
 //    public ScheduledThreadPoolExecutor(int corePoolSize) {
@@ -124,8 +128,13 @@ public class ExecutorConfig {
         //配置线程池中的线程的名称前缀
         executor.setThreadNamePrefix("async-service-");
 
-        // rejection-policy：当pool已经达到max size的时候，如何处理新任务
-        // CALLER_RUNS：不在新线程中执行任务，而是有调用者所在的线程来执行
+        /** rejection-policy：当pool已经达到max size的时候，如何处理新任务
+         CALLER_RUNS：不在新线程中执行任务，而是有调用者所在的线程来执行
+         AbortPolicy：用于被拒绝任务的处理程序，它将抛出RejectedExecutionException
+         CallerRunsPolicy：用于被拒绝任务的处理程序，它直接在execute方法的调用线程中运行被拒绝的任务。
+         DiscardOldestPolicy：用于被拒绝任务的处理程序，它放弃最旧的未处理请求，然后重试execute。
+         DiscardPolicy：用于被拒绝任务的处理程序，默认情况下它将丢弃被拒绝的任务。
+         */
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
         //执行初始化
         executor.initialize();
