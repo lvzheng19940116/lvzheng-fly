@@ -24,7 +24,6 @@ public class TempalateDemo {
         WxMpTemplateMessage templateMessage = new WxMpTemplateMessage();
         templateMessage.setTemplateId("模板ID");
         templateMessage.setToUser("要发送的人的Openid");
-
         //点餐模板
         List<WxMpTemplateData> data = Arrays.asList(
                 new WxMpTemplateData("first", "亲，请记得收货。"),
