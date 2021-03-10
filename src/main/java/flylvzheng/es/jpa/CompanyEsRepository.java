@@ -1,4 +1,4 @@
-package flylvzheng.es;
+package flylvzheng.es.jpa;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;

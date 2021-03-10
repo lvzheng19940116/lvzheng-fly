@@ -1,10 +1,14 @@
 package flylvzheng.threadpool.pool;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import io.netty.util.concurrent.RejectedExecutionHandler;
+import org.apache.commons.lang3.concurrent.BasicThreadFactory;
+import org.apache.lucene.util.NamedThreadFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.concurrent.CustomizableThreadFactory;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +16,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -95,9 +100,17 @@ public class ExecutorConfig {
                                        BlockingQueue workQueue,
                                        RejectedExecutionHandler handler) {
 
+        //自定义线程名称 三种方式
+        ThreadFactory basicThreadFactory = new BasicThreadFactory.Builder().namingPattern("basicThreadFactory-").build();
+        ThreadFactory guavaThreadFactory = new ThreadFactoryBuilder().setNameFormat("retryClient-pool-").build();
+        ThreadFactory springThreadFactory = new CustomizableThreadFactory("springThread-pool-");
+
+
         return new ThreadPoolExecutor(corePoolSize, maximumPoolSize,
                 0L, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>(10));
+                new LinkedBlockingQueue<Runnable>(10)
+                ,basicThreadFactory
+        );
         //     LinkedBlockingQueue 默认 2147483647
         //公平队列  先进先出 fifo
         //    ArrayBlockingQueue a=   new ArrayBlockingQueue(100,true);

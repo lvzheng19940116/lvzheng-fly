@@ -1,4 +1,4 @@
-package flylvzheng.redis;
+package flylvzheng.redis.time;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
@@ -85,7 +85,7 @@ public class RedisLockAspect {
     /**
      * @annotation 中的路径表示拦截特定注解
      */
-    @Pointcut("@annotation(flylvzheng.redis.RedisLockAnnotation)")
+    @Pointcut("@annotation(flylvzheng.redis.time.RedisLockAnnotation)")
     public void redisLockPC() {
     }
 

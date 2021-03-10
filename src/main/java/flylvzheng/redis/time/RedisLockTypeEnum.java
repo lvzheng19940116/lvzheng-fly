@@ -1,4 +1,4 @@
-package flylvzheng.redis;
+package flylvzheng.redis.time;
 
 /**
  * @author LvZheng

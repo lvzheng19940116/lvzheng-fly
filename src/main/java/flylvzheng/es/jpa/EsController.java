@@ -1,4 +1,4 @@
-package flylvzheng.es;
+package flylvzheng.es.jpa;
 
 import flylvzheng.bean.Company;
 import flylvzheng.repository.CompanyRepository;

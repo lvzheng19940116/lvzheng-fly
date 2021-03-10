@@ -1,4 +1,4 @@
-package flylvzheng.es;
+package flylvzheng.es.jpa;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

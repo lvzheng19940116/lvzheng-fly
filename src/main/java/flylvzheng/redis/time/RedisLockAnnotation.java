@@ -1,4 +1,4 @@
-package flylvzheng.redis;
+package flylvzheng.redis.time;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -72,6 +72,7 @@ spring:
       buffer-memory: 524288
       retries: 3
       batch-size: 65536
+      acks: all # 0 / 1
     template:
       default-topic: lvzheng
 
