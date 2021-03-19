@@ -248,7 +248,7 @@ public class RedisController {
     }
 
     /**
-     * 集合（Set）
+     * hash
      */
     public static void testHash() {
         try {
