@@ -18,15 +18,16 @@ import java.util.ArrayList;
  * 创建时间：2021/2/26 下午3:27
  */
 public class ScrewDb {
-    public void contextLoads() {
+    public static void contextLoads() {
 
         //数据源
         HikariConfig hikariConfig = new HikariConfig();
         // hikariConfig.setDriverClassName("com.mysql.cj.jdbc.Driver");
         hikariConfig.setDriverClassName("com.mysql.jdbc.Driver");
-        hikariConfig.setJdbcUrl("jdbc:mysql://127.0.0.1/fly?characterEncoding=utf-8&useSSL=false");
+       // hikariConfig.setJdbcUrl("jdbc:mysql://127.0.0.1/fly?characterEncoding=utf-8&useSSL=false");
+        hikariConfig.setJdbcUrl("jdbc:mysql://ykrh.f3322.net:33060/auth?characterEncoding=utf-8&useSSL=false");
         hikariConfig.setUsername("root");
-        hikariConfig.setPassword("root");
+        hikariConfig.setPassword("pwd@123");
         //设置可以获取tables remarks信息
         hikariConfig.addDataSourceProperty("useInformationSchema", "true");
         hikariConfig.setMinimumIdle(2);
@@ -58,7 +59,7 @@ public class ScrewDb {
         ProcessConfig processConfig = ProcessConfig.builder()
                 //指定生成逻辑、当存在指定表、指定表前缀、指定表后缀时，将生成指定表，其余表不生成、并跳过忽略表配置
                 //根据名称指定表生成
-                .designatedTableName(Lists.newArrayList("emp"))
+                .designatedTableName(Lists.newArrayList())
                 //根据表前缀生成
                 .designatedTablePrefix(new ArrayList<>())
                 //根据表后缀生成
@@ -86,4 +87,8 @@ public class ScrewDb {
         new DocumentationExecute(config).execute();
 
     }
+
+//    public static void main(String[] args) {
+//        contextLoads();
+//    }
 }
