@@ -17,5 +17,5 @@ import org.springframework.stereotype.Repository;
  * 创建时间：2018/10/31 下午2:33
  */
 @Repository
-public interface CompanyEsRepository extends ElasticsearchRepository<CompanyEs,String> {
+public interface CompanyEsRepository /*extends ElasticsearchRepository<CompanyEs,String>*/ {
 }

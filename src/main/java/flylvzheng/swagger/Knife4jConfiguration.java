@@ -17,6 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 @EnableKnife4j
+//http://localhost:9999/doc.html
 public class Knife4jConfiguration {
 
     @Bean(value = "defaultApi2")
